@@ -1,0 +1,788 @@
+{
+    "key": "group_67d7266c58c6f",
+    "title": "Block: Flex Row",
+    "fields": [
+        {
+            "key": "field_67d7266c5b45b",
+            "label": "Mobile-first",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_67d726f2cc7d9",
+            "label": "Row Width",
+            "name": "width",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1\/12": "Span 1",
+                "2\/12": "Span 2",
+                "3\/12": "Span 3",
+                "4\/12": "Span 4",
+                "5\/12": "Span 5",
+                "6\/12": "Span 6",
+                "7\/12": "Span 7",
+                "8\/12": "Span 8",
+                "9\/12": "Span 9",
+                "10\/12": "Span 10",
+                "11\/12": "Span 11",
+                "full": "Full Width"
+            },
+            "default_value": "full",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67dabc2c558e8",
+            "label": "Justify Row",
+            "name": "justify",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "start": "Start",
+                "center": "Center",
+                "end": "End"
+            },
+            "default_value": "start",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67d726d6cc7d8",
+            "label": "Breakpoint (sm)",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_67d7266c5b461",
+            "label": "Row Width (sm)",
+            "name": "width_sm",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Inherit",
+                "1\/12": "Span 1",
+                "2\/12": "Span 2",
+                "3\/12": "Span 3",
+                "4\/12": "Span 4",
+                "5\/12": "Span 5",
+                "6\/12": "Span 6",
+                "7\/12": "Span 7",
+                "8\/12": "Span 8",
+                "9\/12": "Span 9",
+                "10\/12": "Span 10",
+                "11\/12": "Span 11",
+                "full": "Full Width"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67dabcba558e9",
+            "label": "Justify Row (sm)",
+            "name": "justify_sm",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "unset": "Inherit",
+                "start": "Start",
+                "center": "Center",
+                "end": "End"
+            },
+            "default_value": "unset",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67d7266c5b470",
+            "label": "Breakpoint (md)",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_67d7266c5b477",
+            "label": "Row Width (md)",
+            "name": "width_md",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Inherit",
+                "1\/12": "Span 1",
+                "2\/12": "Span 2",
+                "3\/12": "Span 3",
+                "4\/12": "Span 4",
+                "5\/12": "Span 5",
+                "6\/12": "Span 6",
+                "7\/12": "Span 7",
+                "8\/12": "Span 8",
+                "9\/12": "Span 9",
+                "10\/12": "Span 10",
+                "11\/12": "Span 11",
+                "full": "Full Width"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67dabce4558ea",
+            "label": "Justify Row (md)",
+            "name": "justify_md",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "unset": "Inherit",
+                "start": "Start",
+                "center": "Center",
+                "end": "End"
+            },
+            "default_value": "unset",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67d7266c5b47f",
+            "label": "Breakpoint (lg)",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 1,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_67d7266c5b481",
+            "label": "Row Width (lg)",
+            "name": "width_lg",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Inherit",
+                "1\/12": "Span 1",
+                "2\/12": "Span 2",
+                "3\/12": "Span 3",
+                "4\/12": "Span 4",
+                "5\/12": "Span 5",
+                "6\/12": "Span 6",
+                "7\/12": "Span 7",
+                "8\/12": "Span 8",
+                "9\/12": "Span 9",
+                "10\/12": "Span 10",
+                "11\/12": "Span 11",
+                "full": "Full Width"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67dabd04558eb",
+            "label": "Justify Row (lg)",
+            "name": "justify_lg",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "unset": "Inherit",
+                "start": "Start",
+                "center": "Center",
+                "end": "End"
+            },
+            "default_value": "unset",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67d7266c5b487",
+            "label": "Adjust Spacing",
+            "name": "show_spacing_lg",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Set custom spacing",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_67d7266c5b48b",
+            "label": "Spacing (lg)",
+            "name": "spacing_lg",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67d7266c5b487",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_67d7266c60fd1",
+                    "label": "Padding Left",
+                    "name": "ps",
+                    "aria-label": "",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "min": 0,
+                    "max": 6,
+                    "allow_in_bindings": 0,
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_67d7266c60fd5",
+                    "label": "Padding Right",
+                    "name": "pe",
+                    "aria-label": "",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "min": 0,
+                    "max": 6,
+                    "allow_in_bindings": 0,
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_67d7266c5b48e",
+            "label": "Breakpoint (xl)",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_67d7266c5b492",
+            "label": "Row Width (xl)",
+            "name": "width_xl",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Inherit",
+                "1\/12": "Span 1",
+                "2\/12": "Span 2",
+                "3\/12": "Span 3",
+                "4\/12": "Span 4",
+                "5\/12": "Span 5",
+                "6\/12": "Span 6",
+                "7\/12": "Span 7",
+                "8\/12": "Span 8",
+                "9\/12": "Span 9",
+                "10\/12": "Span 10",
+                "11\/12": "Span 11",
+                "full": "Full Width"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67dabd30558ec",
+            "label": "Justify Row (xl)",
+            "name": "justify_xl",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "unset": "Inherit",
+                "start": "Start",
+                "center": "Center",
+                "end": "End"
+            },
+            "default_value": "unset",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67d7266c5b497",
+            "label": "Adjust Spacing",
+            "name": "show_spacing_xl",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Set custom spacing",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_67d7266c5b49b",
+            "label": "Spacing (xl)",
+            "name": "spacing_xl",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67d7266c5b497",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_67d7266c63db7",
+                    "label": "Padding Left",
+                    "name": "ps",
+                    "aria-label": "",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "min": 0,
+                    "max": 6,
+                    "allow_in_bindings": 0,
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_67d7266c63dba",
+                    "label": "Padding Right",
+                    "name": "pe",
+                    "aria-label": "",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "min": 0,
+                    "max": 6,
+                    "allow_in_bindings": 0,
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_67d7266c5b49f",
+            "label": "Breakpoint (2xl)",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_67d7266c5b4a2",
+            "label": "Row Width (2xl)",
+            "name": "width_2xl",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Inherit",
+                "1\/12": "Span 1",
+                "2\/12": "Span 2",
+                "3\/12": "Span 3",
+                "4\/12": "Span 4",
+                "5\/12": "Span 5",
+                "6\/12": "Span 6",
+                "7\/12": "Span 7",
+                "8\/12": "Span 8",
+                "9\/12": "Span 9",
+                "10\/12": "Span 10",
+                "11\/12": "Span 11",
+                "full": "Full Width"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67dabd4f558ed",
+            "label": "Justify Row (2xl)",
+            "name": "justify_2xl",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "unset": "Inherit",
+                "start": "Start",
+                "center": "Center",
+                "end": "End"
+            },
+            "default_value": "unset",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67d7266c5b4a8",
+            "label": "Adjust Spacing",
+            "name": "show_spacing_2xl",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Set custom spacing",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_67d729458a06d",
+            "label": "Spacing (2xl)",
+            "name": "spacing_2xl",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67d7266c5b4a8",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_67d729458a06e",
+                    "label": "Padding Left",
+                    "name": "ps",
+                    "aria-label": "",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "min": 0,
+                    "max": 6,
+                    "allow_in_bindings": 0,
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_67d729458a06f",
+                    "label": "Padding Right",
+                    "name": "pe",
+                    "aria-label": "",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "min": 0,
+                    "max": 6,
+                    "allow_in_bindings": 0,
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/flex-row"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1746026927
+}

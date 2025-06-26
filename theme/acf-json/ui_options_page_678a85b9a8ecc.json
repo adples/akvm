@@ -1,0 +1,26 @@
+{
+    "key": "ui_options_page_678a85b9a8ecc",
+    "title": "Business Info",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Business Info",
+    "menu_slug": "business-info",
+    "parent_slug": "none",
+    "advanced_configuration": 1,
+    "icon_url": "",
+    "menu_title": "",
+    "position": "",
+    "redirect": 0,
+    "description": "",
+    "menu_icon": {
+        "type": "dashicons",
+        "value": "dashicons-admin-site-alt3"
+    },
+    "update_button": "Update",
+    "updated_message": "Options Updated",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1744210300
+}

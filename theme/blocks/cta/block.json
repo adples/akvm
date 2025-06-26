@@ -1,0 +1,16 @@
+{
+	"$schema": "https://advancedcustomfields.com/schemas/json/main/block.json",
+	"apiVersion": 3,
+	"name": "acf/cta",
+	"title": "CTA",
+	"description": "Custom block.",
+	"keywords": ["cta","call to action","callout"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "cta.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}

@@ -1,0 +1,515 @@
+{
+    "key": "group_67d1d118e6174",
+    "title": "Block: Grid Row",
+    "fields": [
+        {
+            "key": "field_67d635d46931a",
+            "label": "Grid Columns",
+            "name": "grid_columns",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "Important: This changes your child elements\/blocks layout. 12 column grid is default.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "12": "12",
+                "10": "10"
+            },
+            "default_value": 12,
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67d381086ea01",
+            "label": "Mobile-first",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_67d381296ea02",
+            "label": "Gap",
+            "name": "gap",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Set gap between columns",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": [
+                "No Gap",
+                "Gap (1)",
+                "Gap (2)",
+                "Gap (3)",
+                "Gap (4)",
+                "Gap (5)",
+                "Gap (6)",
+                "Gap (7)",
+                "Gap (8)",
+                "Gap (9)",
+                "Gap (10)",
+                "Gap (11)",
+                "Gap (12)"
+            ],
+            "default_value": 3,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67d2e3e93135d",
+            "label": "Breakpoint (sm)",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_67d2d56e32b5e",
+            "label": "Gap",
+            "name": "gap_sm",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Set gap between columns",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Inherit",
+                "0": "No Gap",
+                "1": "Gap (1)",
+                "2": "Gap (2)",
+                "3": "Gap (3)",
+                "4": "Gap (4)",
+                "5": "Gap (5)",
+                "6": "Gap (6)",
+                "7": "Gap (7)",
+                "8": "Gap (8)",
+                "9": "Gap (9)",
+                "10": "Gap (10)",
+                "11": "Gap (11)",
+                "12": "Gap (12)"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67d1d119842e7",
+            "label": "Vertical Alignment",
+            "name": "vertical_align_sm",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "unset": "Start",
+                "center": "Center",
+                "end": "End"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67d2e2ab24613",
+            "label": "Breakpoint (md)",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_67d2e2708366e",
+            "label": "Gap (md)",
+            "name": "gap_md",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Set gap between columns",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Inherit",
+                "0": "No Gap",
+                "1": "Gap (1)",
+                "2": "Gap (2)",
+                "3": "Gap (3)",
+                "4": "Gap (4)",
+                "5": "Gap (5)",
+                "6": "Gap (6)",
+                "7": "Gap (7)",
+                "8": "Gap (8)",
+                "9": "Gap (9)",
+                "10": "Gap (10)",
+                "11": "Gap (11)",
+                "12": "Gap (12)"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67d2e1f48366a",
+            "label": "Vertical Alignment (md)",
+            "name": "vertical_align_md",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "unset": "Start",
+                "center": "Center",
+                "end": "End"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67d2e34824614",
+            "label": "Breakpoint (lg)",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 1,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_67d2dab046b1b",
+            "label": "Gap (lg)",
+            "name": "gap_lg",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Set gap between columns",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Inherit",
+                "0": "No Gap",
+                "1": "Gap (1)",
+                "2": "Gap (2)",
+                "3": "Gap (3)",
+                "4": "Gap (4)",
+                "5": "Gap (5)",
+                "6": "Gap (6)",
+                "7": "Gap (7)",
+                "8": "Gap (8)",
+                "9": "Gap (9)",
+                "10": "Gap (10)",
+                "11": "Gap (11)",
+                "12": "Gap (12)"
+            },
+            "default_value": 6,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67d2e2148366b",
+            "label": "Vertical Alignment (lg)",
+            "name": "vertical_align_lg",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "unset": "Start",
+                "center": "Center",
+                "end": "End"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67d2e36024615",
+            "label": "Breakpoint (xl)",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_67d2e2998366f",
+            "label": "Gap (xl)",
+            "name": "gap_xl",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Set gap between columns",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Inherit",
+                "0": "No Gap",
+                "1": "Gap (1)",
+                "2": "Gap (2)",
+                "3": "Gap (3)",
+                "4": "Gap (4)",
+                "5": "Gap (5)",
+                "6": "Gap (6)",
+                "7": "Gap (7)",
+                "8": "Gap (8)",
+                "9": "Gap (9)",
+                "10": "Gap (10)",
+                "11": "Gap (11)",
+                "12": "Gap (12)"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67d2e2368366d",
+            "label": "Vertical Alignment (xl)",
+            "name": "vertical_align_xl",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "unset": "Start",
+                "center": "Center",
+                "end": "End"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_67d2e37724616",
+            "label": "Breakpoint (2xl)",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_67d2dac546b1c",
+            "label": "Gap (2xl)",
+            "name": "gap_2xl",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Set gap between columns",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Inherit",
+                "0": "No Gap",
+                "1": "Gap (1)",
+                "2": "Gap (2)",
+                "3": "Gap (3)",
+                "4": "Gap (4)",
+                "5": "Gap (5)",
+                "6": "Gap (6)",
+                "7": "Gap (7)",
+                "8": "Gap (8)",
+                "9": "Gap (9)",
+                "10": "Gap (10)",
+                "11": "Gap (11)",
+                "12": "Gap (12)"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67d2e2278366c",
+            "label": "Vertical Alignment (2xl)",
+            "name": "vertical_align_2xl",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "unset": "Start",
+                "center": "Center",
+                "end": "End"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/grid-row"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1746026927
+}

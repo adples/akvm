@@ -1,0 +1,414 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `base` layer
+ */
+
+/**
+ * This uses the background and foreground colors declared in the `theme.json`
+ * file and is applied both to the front end and in the block editor.
+ */
+
+[x-cloak] {
+	display: none !important;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	@apply bg-background text-foreground font-sans;
+}
+
+body.logged-in.admin-bar .navbar-reveal.affix {
+	top: 0px;
+}
+
+@media (min-width: 600px) {
+	body.logged-in.admin-bar .navbar-reveal.affix,
+	body.logged-in.admin-bar .offcanvas-menu.menu-open {
+		top: 46px !important;
+	}
+
+	body.logged-in.admin-bar .offcanvas-menu.menu-open {
+		height: calc(100dvh - 46px);
+	}
+}
+
+@media (min-width: 783px) {
+	body.logged-in.admin-bar .navbar-reveal.affix,
+	body.logged-in.admin-bar .offcanvas-menu.menu-open {
+		top: 32px !important;
+	}
+
+	body.logged-in.admin-bar .offcanvas-menu.menu-open {
+		height: calc(100dvh - 32px);
+	}
+}
+
+.main-content p,
+.main-content ul,
+.main-content ol {
+	margin-bottom: 1rem;
+}
+
+.main-content p {
+	@apply 2xl:text-lg;
+}
+
+.main-content p a {
+	color: var(--color-primary);
+}
+
+.wp-block-image.aligncenter {
+	width: 100%;
+}
+
+.wp-block-image.aligncenter img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p.has-slight-reduce-font-size {
+	@apply text-[.925rem] 2xl:text-base;
+}
+
+p.has-reduce-font-size {
+	@apply text-[.875rem];
+}
+
+.content-card > div > *:not(.wp-block-image),
+.content-card > .card-icon {
+	@apply px-4 2xl:px-6;
+}
+
+.content-card-dark > div > *:not(.wp-block-image) {
+	@apply 2xl:px-12;
+}
+
+.has-heading-1-font-size,
+.h1,
+p.has-heading-1-font-size {
+	@apply text-5xl/14 lg:text-6xl/18 xl:text-7xl/22;
+}
+
+.has-heading-2-font-size,
+.h2,
+p.has-heading-2-font-size {
+	@apply text-4xl/10 lg:text-5xl/14 xl:text-6xl/18;
+}
+
+.has-heading-3-font-size,
+.h3,
+p.has-heading-3-font-size {
+	@apply text-3xl/10 lg:text-4xl/10 xl:text-5xl/14;
+}
+
+.has-heading-4-font-size,
+.h4,
+p.has-heading-4-font-size,
+.footer .widget-title {
+	@apply text-2xl/2 lg:text-3xl/6 xl:text-4xl/10;
+}
+
+.has-heading-5-font-size,
+.h5,
+p.has-heading-5-font-size {
+	@apply text-xl lg:text-2xl xl:text-3xl;
+}
+
+.has-heading-6-font-size,
+.h6,
+p.has-heading-6-font-size {
+	@apply text-lg lg:text-xl xl:text-2xl;
+}
+
+.has-teko-font-family.has-heading-1-font-size {
+	line-height: 1;
+	@apply 2xl:text-[5rem];
+}
+
+.has-teko-font-family.has-heading-2-font-size {
+	line-height: 1;
+	@apply 2xl:text-[4rem];
+}
+
+p.is-style-lead {
+	@apply 2xl:text-2xl;
+}
+
+/**/
+.border-t-dark {
+	border-top: solid 0.65rem var(--color-foreground);
+}
+
+/*card*/
+
+.accent-row {
+	margin-top: 55px;
+	margin-bottom: 90px;
+}
+
+.accent-row > div:not(:last-child) {
+	margin-bottom: 120px;
+	@apply lg:mb-0;
+}
+
+.accent-row > div:nth-last-child(2) {
+	@apply md:mb-0;
+}
+
+.content-card-accent::before,
+.content-card-accent::after {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	background-size: 100% 100%;
+	z-index: 1;
+	content: "";
+}
+
+.content-card-accent::before {
+	height: 55px;
+	top: -55px;
+	background-image: url("/wp-content/themes/akvm/theme/images/accent-top.png");
+}
+
+.content-card-accent::after {
+	height: 90px;
+	bottom: -90px;
+	background-image: url("/wp-content/themes/akvm/theme/images/accent-bottom.png");
+}
+
+/**/
+.wp-block-acf-cta::before,
+.wp-block-acf-cta::after {
+	position: absolute;
+	width: 100px;
+	aspect-ratio: 2;
+	clip-path: polygon(0 0, 100% 0, 0 100%);
+	content: "";
+	@apply bg-primary hidden lg:block;
+}
+.wp-block-acf-cta::before {
+	top: 0;
+	left: 0;
+}
+
+.wp-block-acf-cta::after {
+	right: 0;
+	bottom: 0;
+	clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/**/
+.hero-company::after {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background-position: center bottom;
+	background-image: url("/wp-content/themes/akvm/theme/images/hero-company-border.png");
+	background-size: 101% 100%;
+	z-index: 5;
+	content: "";
+	@apply h-[100px] lg:h-[200px];
+}
+
+/**/
+.service-section {
+	position: relative;
+	@apply pt-[100px] shadow-[inset_0_100px_0_0_#fff] lg:pt-0;
+	@apply lg:shadow-[inset_0_200px_0_0_#fff];
+	@apply pb-15 xl:pb-25 2xl:shadow-[inset_0_300px_0_0_#fff];
+}
+.service-section::after {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	background-position: center top;
+	background-image: url("/wp-content/themes/akvm/theme/images/hero-service-border.png");
+	background-size: 101% 100%;
+	z-index: 0;
+	content: "";
+	@apply h-[100px] lg:h-[200px] 2xl:h-[300px];
+}
+
+/**/
+.bg-striped {
+	background: repeating-linear-gradient(
+		135deg,
+		var(--color-primary-light),
+		var(--color-primary-light) 25%,
+		var(--color-primary) 25%,
+		var(--color-primary) 50%
+	);
+}
+
+.bg-striped .is-style-rounded-tl img {
+	@apply rounded-tl-[1rem] md:rounded-tl-[2rem] lg:rounded-tl-[3rem];
+}
+
+.bg-striped .icon-wrapper {
+	color: #fff !important;
+}
+
+.is-style-rounded-tr img {
+	@apply rounded-tr-[1rem] md:rounded-tr-[2rem] lg:rounded-tr-[3rem];
+}
+
+.gform_wrapper.gravity-theme .gform_footer {
+	padding-bottom: 0;
+}
+
+.gform_wrapper.gravity-theme input[type="text"],
+.gform_wrapper.gravity-theme input[type="email"],
+.gform_wrapper.gravity-theme input[type="tel"],
+.gform_wrapper.gravity-theme textarea,
+.gform_wrapper.gravity-theme select {
+	@apply resize-none rounded-none border-1 border-white/50 bg-stone-900 !p-1.5 text-white/80;
+}
+
+.gform_wrapper.gravity-theme .gfield_label {
+	@apply font-sans !text-sm !font-normal text-white;
+}
+
+.gform_wrapper.gravity-theme .ginput_complex label {
+	@apply !text-xs text-white;
+}
+
+.gform_wrapper.gravity-theme .gform_footer {
+	@apply !pb-0;
+}
+
+.gform_wrapper.gravity-theme.detail-contact-form_wrapper select {
+	padding: 0.6125rem;
+	appearance: none;
+	-webkit-appearance: none;
+}
+
+.gform_required_legend {
+	display: none;
+}
+
+.gform_wrapper.gravity-theme.detail-contact-form_wrapper .gfield_required,
+.footer .gform_wrapper.gravity-theme .gfield_required {
+	color: var(--color-primary);
+}
+
+.detail-contact-form_wrapper {
+	@apply border-foreground relative rounded-[1rem] !rounded-br-none border-2 bg-white p-4 md:rounded-[2rem] md:p-8 lg:rounded-[3rem] lg:p-12;
+}
+
+.hidden-scroller {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.image-panel .has-heading-2-font-size {
+	line-height: 1.35;
+}
+
+.hero-home ul li,
+.hero-home a span {
+	text-shadow: -1px -1px 3px rgba(0, 0, 0, 0.75);
+}
+
+.hero-home h1,
+.hero-home h2,
+.hero-home h3,
+.hero-home h4,
+.hero-home h5,
+.hero-home h6 {
+	text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.75);
+}
+
+.hero-home::before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+	content: "";
+	@apply bg-linear-to-r from-black/85 from-25% to-transparent;
+}
+
+.hero-home::after {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background-position: center bottom;
+	background-image: url("/wp-content/themes/akvm/theme/images/hero-border.png");
+	background-size: 100% 100%;
+	z-index: 5;
+	content: "";
+	@apply h-[100px] xl:h-[150px];
+}
+
+.is-style-gradient-overlay {
+	position: relative;
+}
+
+.bg-filter::before,
+.is-style-gradient-overlay::after,
+.is-style-gradient-overlay-rev::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0);
+	content: "";
+}
+
+.image-panel::before {
+	background-color: rgba(0, 0, 0, 0.33);
+}
+
+.is-style-gradient-overlay::after {
+	@apply from-primary bg-linear-to-b to-transparent to-50%;
+}
+
+.is-style-gradient-overlay-rev::after {
+	@apply from-primary bg-linear-to-t to-transparent to-90%;
+}
+
+.is-style-subtle-shadow {
+	/*text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);*/
+	@apply text-shadow-lg;
+}
+
+.is-style-rounded-white {
+	@apply overflow-hidden rounded-4xl border-2 border-white;
+}
+
+.location-lists ul,
+.service-lists ul {
+	margin-bottom: 0;
+}
+.text-sm p {
+	@apply text-sm;
+}
+
+.noselect {
+	cursor: default;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+}
+
+.noselect:hover {
+	cursor: default;
+}
+
+.footer .widget-title {
+	@apply font-display mb-3;
+}

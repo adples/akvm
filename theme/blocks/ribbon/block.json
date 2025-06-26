@@ -1,0 +1,16 @@
+{
+	"$schema": "https://advancedcustomfields.com/schemas/json/main/block.json",
+	"apiVersion": 3,
+	"name": "acf/ribbon",
+	"title": "Image Ribbon",
+	"description": "Custom block.",
+	"keywords": ["ribbon","cta","stripe"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "ribbon.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "https://advancedcustomfields.com/schemas/json/main/block.json",
+	"apiVersion": 3,
+	"name": "acf/about-akvm",
+	"title": "About AKVM",
+	"description": "Custom block.",
+	"keywords": ["about","AKVM"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "about-akvm.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}
