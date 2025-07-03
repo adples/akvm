@@ -41,6 +41,11 @@
 					"name": "Primary Light"
 				},
 				{
+					"slug": "light-grey",
+					"color": "#f2f2f2",
+					"name": "Light Grey"
+				},
+				{
 					"slug": "neutral",
 					"color": "#ddd",
 					"name": "Neutral"

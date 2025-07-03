@@ -898,6 +898,9 @@ p.has-reduce-font-size {
     display: inline-block;
   }
 }
+.collapse {
+  visibility: collapse;
+}
 .visible {
   visibility: visible;
 }
@@ -2625,6 +2628,9 @@ p.has-reduce-font-size {
   .text-white\/75 {
     color: color-mix(in oklab, var(--color-white) 75%, transparent);
   }
+}
+.capitalize {
+  text-transform: capitalize;
 }
 .uppercase {
   text-transform: uppercase;
