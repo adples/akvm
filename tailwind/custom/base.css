@@ -412,3 +412,7 @@ p.is-style-lead {
 .footer .widget-title {
 	@apply font-display mb-3;
 }
+
+.test-class {
+	color: red;
+}

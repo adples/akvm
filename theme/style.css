@@ -825,6 +825,9 @@ p.has-reduce-font-size {
   margin-bottom: calc(var(--spacing) * 3);
   font-family: var(--font-display);
 }
+.test-class {
+  color: red;
+}
 .page-title, .entry-title {
   margin-inline: auto;
   margin-bottom: calc(var(--spacing) * 6);
