@@ -4043,6 +4043,11 @@ p.has-reduce-font-size {
   }
 }
 @media (width >= 64rem) {
+  .lg\:min-h-\[333px\] {
+    min-height: 333px;
+  }
+}
+@media (width >= 64rem) {
   .lg\:w-1\/4 {
     width: calc(1/4 * 100%);
   }
@@ -4306,6 +4311,11 @@ p.has-reduce-font-size {
 @media (width >= 64rem) {
   .lg\:object-cover {
     object-fit: cover;
+  }
+}
+@media (width >= 64rem) {
+  .lg\:object-center {
+    object-position: center;
   }
 }
 @media (width >= 64rem) {

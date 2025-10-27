@@ -121,9 +121,9 @@ $classes = implode( ' ', $all_classes );
 								</button>
 
 								<div class="lg:gap-6 xl:gap-12 grid grid-cols-12">
-									<div class="relative col-span-12 lg:col-span-4">
+									<div class="relative col-span-12 lg:col-span-4 lg:min-h-[333px]">
 										<?php if ( $photo ) : ?>
-											<img src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt']); ?>" class="lg:absolute lg:inset-0 my-4 lg:my-0 w-full lg:h-full lg:object-cover lg:object-right">
+											<img src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt']); ?>" class="lg:absolute lg:inset-0 my-4 lg:my-0 w-full lg:h-full lg:object-center lg:object-cover">
 										<?php endif; ?>
 									</div>
 									<div class="col-span-12 lg:col-span-8 p-4 lg:p-0 lg:pr-6 lg:pb-6 text-left">
