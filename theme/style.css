@@ -4193,6 +4193,11 @@ p.has-reduce-font-size {
   }
 }
 @media (width >= 64rem) {
+  .lg\:min-h-\[350px\] {
+    min-height: 350px;
+  }
+}
+@media (width >= 64rem) {
   .lg\:w-1\/4 {
     width: calc(1/4 * 100%);
   }

@@ -78,7 +78,15 @@ $classes = implode( ' ', $all_classes );
 					$photo = get_sub_field('img');
 					$bio = get_sub_field('bio');
 					?>
-					<div x-data="{ open: false }" x-effect="document.body.classList.toggle('overflow-hidden', open);document.querySelectorAll('.navbar-reveal').forEach(el => el.classList.toggle('hidden', open));" class="text-center">
+					<div x-data="{ open: false }" x-effect="
+						document.body.classList.toggle('overflow-hidden', open);
+						document.querySelectorAll('.navbar-reveal').forEach(el => el.classList.toggle('hidden', open));
+						const parent = $el.closest('.wp-block-acf-wrapper');
+						 if (parent) {
+                    		parent.classList.toggle('relative', open);
+                    		parent.classList.toggle('z-10', open);
+                		}
+						" class="text-center">
 						<div class="space-y-4 text-white">
 							<?php if ( $photo ) : ?>
 								<img src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt']); ?>" class="block mx-auto border-2 border-primary rounded-full w-full max-w-75 not-prose">
@@ -121,7 +129,7 @@ $classes = implode( ' ', $all_classes );
 								</button>
 
 								<div class="lg:gap-6 xl:gap-12 grid grid-cols-12">
-									<div class="relative col-span-12 lg:col-span-4 lg:min-h-[333px]">
+									<div class="relative col-span-12 lg:col-span-4 lg:min-h-[350px]">
 										<?php if ( $photo ) : ?>
 											<img src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt']); ?>" class="lg:absolute lg:inset-0 my-4 lg:my-0 w-full lg:h-full lg:object-center lg:object-cover">
 										<?php endif; ?>
