@@ -1,0 +1,16 @@
+{
+	"$schema": "https://advancedcustomfields.com/schemas/json/main/block.json",
+	"apiVersion": 3,
+	"name": "acf/team",
+	"title": "Team Members",
+	"description": "Custom block.",
+	"keywords": ["team","fbio","content"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "team.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}
