@@ -51,3 +51,9 @@ wp.domReady(() => {
 	// 	label: 'Fancy Quote',
 	// } );
 });
+
+import Alpine from 'alpinejs';
+
+window.Alpine = Alpine;
+
+Alpine.start();

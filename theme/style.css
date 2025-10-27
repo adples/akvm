@@ -29,6 +29,7 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
   --color-blue-500: oklch(62.3% 0.214 259.815);
+  --color-indigo-600: oklch(51.1% 0.262 276.966);
   --color-gray-200: oklch(92.8% 0.006 264.531);
   --color-gray-300: oklch(87.2% 0.01 258.338);
   --color-gray-400: oklch(70.7% 0.022 261.325);
@@ -2612,6 +2613,9 @@ p.has-reduce-font-size {
 .text-foreground {
   color: var(--color-foreground);
 }
+.text-indigo-600 {
+  color: var(--color-indigo-600);
+}
 .text-neutral-600 {
   color: var(--color-neutral-600);
 }
@@ -2629,14 +2633,14 @@ p.has-reduce-font-size {
     color: color-mix(in oklab, var(--color-white) 75%, transparent);
   }
 }
-.capitalize {
-  text-transform: capitalize;
-}
 .uppercase {
   text-transform: uppercase;
 }
 .italic {
   font-style: italic;
+}
+.underline {
+  text-decoration-line: underline;
 }
 .opacity-0 {
   opacity: 0%;
