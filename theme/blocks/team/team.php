@@ -111,7 +111,7 @@ $classes = implode( ' ', $all_classes );
 							<div
 								x-show="open"
 								x-transition
-								class="relative bg-white shadow-xl mx-4 pt-6 rounded-xl w-full max-w-[400px] lg:max-w-[1000px] max-h-[90vh] overflow-y-auto"
+								class="relative bg-white shadow-xl mx-4 pt-6 rounded-xl w-full max-w-[400px] lg:max-w-[1200px] max-h-[90vh] overflow-y-auto"
 							>
 								<button
 									@click="open = false"
