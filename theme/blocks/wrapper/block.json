@@ -25,6 +25,7 @@
 	"styles": [
 		{ "name": "default", "label": "Default", "isDefault": true },
 		{ "name": "gradient-overlay", "label": "Gradient Overlay" },
-		{ "name": "banner-overlay", "label": "Banner Overlay" }
+		{ "name": "banner-overlay", "label": "Banner Overlay" },
+		{ "name": "top-stripe", "label": "Top Accent" }
 	]
 }

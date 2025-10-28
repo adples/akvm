@@ -74,7 +74,7 @@ if( get_field('style') === 'border' ){
 	$wrapper_styles = '!rounded-bl-none shadow-(--subtle-shadow)';
 }
 
-$icon = get_field('icon') ? '<span class="top-4 lg:top-6 2xl:top-4 xl:top-2 right-4 lg:right-6 2xl:right-4 absolute icon-[material-symbols-light--asterisk-rounded] size-20 lg:size-26 2xl:size-48 xl:size-36 text-foreground wrapper-icon"></span>' : '';
+$icon = get_field('icon') ? '<span class="top-4 lg:top-6 2xl:top-4 xl:top-2 right-4 lg:right-6 2xl:right-4 absolute size-20 lg:size-26 2xl:size-48 xl:size-36 text-foreground icon-[material-symbols-light--asterisk-rounded] wrapper-icon"></span>' : '';
 
 // Create array $all_classes and implode
 $all_classes = array(
@@ -97,6 +97,13 @@ if( get_field('container') ) {
 	$container = 'relative z-2 content-wrapper';
 }
 
+// Bg Position
+if( get_field('bg_pos') ) {
+	$bg_pos = get_field('bg_pos');
+} else{
+	$bg_pos ='';
+}
+
 
 // Background Image
 $bg= '';
@@ -109,7 +116,7 @@ if( get_field('bg') ){
 	if($blockID === 'chooseAKVM'){
 		$attributes = 'class="'.$classes.'pb-[400px] lg:pb-12 bg-size-[500px] bg-position-[bottom_center] lg:bg-size-[55%] lg:bg-position-[100%_100%] xl:bg-size-[50%] xl:bg-position-[95%_100%] 2xl:bg-auto bg-no-repeat bg-resize" style="background-image: url('.$bg_md[0].')" data-img-md="'.$bg_md[0].'" data-img-full="'.$bg_full[0].'"';
 	} else{
-		$attributes = 'class="'.$classes.' bg-local bg-cover bg-center bg-no-repeat bg-resize" style="background-image: url('.$bg_md[0].')" data-img-md="'.$bg_md[0].'" data-img-full="'.$bg_full[0].'"';
+		$attributes = 'class="'.$classes.' '.$bg_pos.' bg-local bg-cover bg-no-repeat bg-resize" style="background-image: url('.$bg_md[0].')" data-img-md="'.$bg_md[0].'" data-img-full="'.$bg_full[0].'"';
 	}
 } else {
 	$attributes = 'class="'.$classes.'"';
