@@ -39,7 +39,7 @@ $card_default_classes = 'content-card';
 if( get_field('style') === 'light' ){
 	$card_styles = 'py-8 border-2 border-primary bg-white h-full rounded-xl';
 } elseif( get_field('style') === 'dark' ){
-	$card_styles = 'content-card-dark overflow-hidden pb-6 border-2 border-primary rounded-4xl';
+	$card_styles = 'content-card-dark overflow-hidden pb-6 border-2 border-primary rounded-4xl h-full';
 } elseif( get_field('style') === 'accent' ){
 	$card_styles = 'content-card-accent max-w-[340px] mx-auto relative py-4 bg-white lg:h-full';
 } else{

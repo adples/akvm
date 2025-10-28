@@ -133,7 +133,7 @@ p.has-heading-6-font-size {
 }
 
 p.is-style-lead {
-	@apply 2xl:text-2xl;
+	@apply lg:text-lg xl:text-xl 2xl:text-2xl;
 }
 
 /**/

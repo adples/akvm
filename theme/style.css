@@ -435,6 +435,18 @@ p.has-reduce-font-size {
     font-size: 4rem;
   }
 }
+@media (width >= 64rem) {
+  p.is-style-lead {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+}
+@media (width >= 80rem) {
+  p.is-style-lead {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+}
 @media (width >= 96rem) {
   p.is-style-lead {
     font-size: var(--text-2xl);
