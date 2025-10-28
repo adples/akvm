@@ -24,6 +24,7 @@
 	},
 	"styles": [
 		{ "name": "default", "label": "Default", "isDefault": true },
-		{ "name": "gradient-overlay", "label": "Gradient Overlay" }
+		{ "name": "gradient-overlay", "label": "Gradient Overlay" },
+		{ "name": "banner-overlay", "label": "Banner Overlay" }
 	]
 }

@@ -18,6 +18,7 @@
  * xl:my-2 xl:my-4 xl:my-6 xl:my-8 xl:my-10 xl:my-12 lx:my-14 xl:my-16 xl:my-18 xl:my-20 xl:my-22 xl:my-24
  * 2xl:my-2 2xl:my-4 2xl:my-6 2xl:my-8 2xl:my-10 2xl:my-12 2lx:my-14 2xl:my-16 2xl:my-18 2xl:my-20 2xl:my-22 2xl:my-24
  * !mb-0
+ * top-[-40px]
  */
 
 
@@ -80,7 +81,7 @@ $classes = implode( ' ', $all_classes );
 					?>
 					<div x-data="{ open: false }" x-effect="
 						document.body.classList.toggle('overflow-hidden', open);
-						document.querySelectorAll('.navbar-reveal').forEach(el => el.classList.toggle('hidden', open));
+						document.querySelectorAll('.navbar-reveal').forEach(el => el.classList.toggle('opacity-0', open));
 						const parent = $el.closest('.wp-block-acf-wrapper');
 						 if (parent) {
                     		parent.classList.toggle('relative', open);

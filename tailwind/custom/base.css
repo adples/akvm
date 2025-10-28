@@ -16,7 +16,7 @@ html {
 }
 
 body {
-	@apply bg-background text-foreground font-sans;
+	@apply bg-background font-sans text-foreground;
 }
 
 body.logged-in.admin-bar .navbar-reveal.affix {
@@ -187,7 +187,7 @@ p.is-style-lead {
 	aspect-ratio: 2;
 	clip-path: polygon(0 0, 100% 0, 0 100%);
 	content: "";
-	@apply bg-primary hidden lg:block;
+	@apply hidden lg:block bg-primary;
 }
 .wp-block-acf-cta::before {
 	top: 0;
@@ -217,9 +217,9 @@ p.is-style-lead {
 /**/
 .service-section {
 	position: relative;
-	@apply pt-[100px] shadow-[inset_0_100px_0_0_#fff] lg:pt-0;
+	@apply shadow-[inset_0_100px_0_0_#fff] pt-[100px] lg:pt-0;
 	@apply lg:shadow-[inset_0_200px_0_0_#fff];
-	@apply pb-15 xl:pb-25 2xl:shadow-[inset_0_300px_0_0_#fff];
+	@apply 2xl:shadow-[inset_0_300px_0_0_#fff] pb-15 xl:pb-25;
 }
 .service-section::after {
 	position: absolute;
@@ -270,11 +270,11 @@ p.is-style-lead {
 }
 
 .gform_wrapper.gravity-theme .gfield_label {
-	@apply font-sans !text-sm !font-normal text-white;
+	@apply font-sans !font-normal text-white !text-sm;
 }
 
 .gform_wrapper.gravity-theme .ginput_complex label {
-	@apply !text-xs text-white;
+	@apply text-white !text-xs;
 }
 
 .gform_wrapper.gravity-theme .gform_footer {
@@ -297,7 +297,7 @@ p.is-style-lead {
 }
 
 .detail-contact-form_wrapper {
-	@apply border-foreground relative rounded-[1rem] !rounded-br-none border-2 bg-white p-4 md:rounded-[2rem] md:p-8 lg:rounded-[3rem] lg:p-12;
+	@apply relative bg-white p-4 md:p-8 lg:p-12 border-2 border-foreground rounded-[1rem] md:rounded-[2rem] lg:rounded-[3rem] !rounded-br-none;
 }
 
 .hidden-scroller {
@@ -349,13 +349,15 @@ p.is-style-lead {
 	@apply h-[100px] xl:h-[150px];
 }
 
-.is-style-gradient-overlay {
+.is-style-gradient-overlay,
+.is-style-banner-overlay {
 	position: relative;
 }
 
 .bg-filter::before,
 .is-style-gradient-overlay::after,
-.is-style-gradient-overlay-rev::after {
+.is-style-gradient-overlay-rev::after,
+.is-style-banner-overlay::after {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -370,11 +372,15 @@ p.is-style-lead {
 }
 
 .is-style-gradient-overlay::after {
-	@apply from-primary bg-linear-to-b to-transparent to-50%;
+	@apply bg-linear-to-b from-primary to-50% to-transparent;
+}
+
+.is-style-banner-overlay::after {
+	@apply bg-linear-to-t from-secondary to-50% to-transparent;
 }
 
 .is-style-gradient-overlay-rev::after {
-	@apply from-primary bg-linear-to-t to-transparent to-90%;
+	@apply bg-linear-to-t from-primary to-90% to-transparent;
 }
 
 .is-style-subtle-shadow {
@@ -383,7 +389,7 @@ p.is-style-lead {
 }
 
 .is-style-rounded-white {
-	@apply overflow-hidden rounded-4xl border-2 border-white;
+	@apply border-2 border-white rounded-4xl overflow-hidden;
 }
 
 .location-lists ul,
@@ -410,7 +416,7 @@ p.is-style-lead {
 }
 
 .footer .widget-title {
-	@apply font-display mb-3;
+	@apply mb-3 font-display;
 }
 
 .test-class {
