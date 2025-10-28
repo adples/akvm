@@ -2422,11 +2422,17 @@ p.has-reduce-font-size {
 .bg-local {
   background-attachment: local;
 }
+.bg-bottom {
+  background-position: bottom;
+}
 .bg-center {
   background-position: center;
 }
 .bg-position-\[bottom_center\] {
   background-position: bottom center;
+}
+.bg-top {
+  background-position: top;
 }
 .bg-no-repeat {
   background-repeat: no-repeat;

@@ -18,6 +18,8 @@
  * xl:pb-10 xl:pb-15 xl:pb-20 xl:pb-25 xl:pb-30 xl:pb-35 xl:pb-40
  * block sm:block md:block lg:block xl:block 2xl:block
  * hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden
+ * bg-top bg-bottom bg-center
+ *
  */
 
 
