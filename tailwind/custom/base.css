@@ -282,7 +282,7 @@ p.is-style-lead {
 }
 
 .gform_wrapper.gravity-theme .contact-page .gfield_label {
-	@apply text-foreground;
+	@apply text-foreground !font-semibold;
 }
 
 .gform_wrapper.gravity-theme .ginput_complex label {
