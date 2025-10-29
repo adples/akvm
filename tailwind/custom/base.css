@@ -450,3 +450,28 @@ p.is-style-lead {
 .rank-math-breadcrumb .separator {
 	@apply text-primary;
 }
+
+.tab-content h3 {
+	@apply font-display mb-2 text-5xl font-semibold;
+}
+
+.tab-content h4 {
+	@apply mb-1 text-xl font-semibold;
+}
+
+.tab-content p {
+	@apply text-base;
+}
+
+.tab-content strong,
+.tab-content b {
+	@apply font-semibold;
+}
+
+.tab-content ul {
+	@apply ml-8 list-disc;
+}
+
+.tab-content ul li:not(:last-child) {
+	@apply pb-2;
+}

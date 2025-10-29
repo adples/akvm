@@ -30,72 +30,85 @@ $additional_classes = $block['className'] ?? '';
 // Card default classes
 $tab_default_classes = '';
 
-if( get_field('style') === 'light' ){
-	$card_styles = 'py-8 border-2 border-primary bg-white h-full rounded-xl';
-} elseif( get_field('style') === 'dark' ){
-	$card_styles = 'content-card-dark overflow-hidden pb-6 border-2 border-primary rounded-4xl';
-} else{
-	$card_styles = 'content-card-accent max-w-[340px] mx-auto relative py-4 bg-white lg:h-full';
-}
-
 // Create array $all_classes and implode
 $all_classes = array(
-	$block_name,
-	$additional_classes,
-	$tab_default_classes
+$block_name,
+$additional_classes,
+$tab_default_classes
 );
 
 $classes = implode( ' ', $all_classes );
 
 ?>
 
-<div <?php echo esc_attr( $anchor ); ?> class="<?php echo $classes ?>">
+<?php if($is_preview): ?>
+	<div class="bg-black h-100"></div>
+<?php else: ?>
+	<?php if( have_rows('tabs') ): ?>
+		<div <?php echo esc_attr( $anchor ); ?> x-data="{
+			activeTab: 0,
+			images: [
+			<?php
+			$index = 0;
+			while( have_rows('tabs') ): the_row();
+				$image = get_sub_field('img');
+				echo $index > 0 ? ',' : '';
+				echo "'" . esc_url($image['url']) . "'";
+				$index++;
+			endwhile;
+			?>
+			]
+		}">
+			<div class="lg:gap-10 2xl:gap-16 grid grid-cols-12">
+				<div class="col-span-12 lg:col-span-5">
+					<div class="relative bg-white mb-8 is-style-rounded-white overflow-hidden">
+						<img
+							:src="images[activeTab]"
+							alt="Product image"
+							class="w-full h-full object-cover transition-opacity duration-300"
+							x-transition>
+					</div>
 
-<div x-data="{ activeTab: 'details' }" class="space-y-2">
-  <ul class="flex gap-2">
-    <li>
-      <a
-        x-on:click.prevent="activeTab = 'details'"
-        :class="{ 'text-indigo-600': activeTab === 'details' }"
-        class="underline"
-        href="#details"
-      >
-        Details
-      </a>
-    </li>
+				</div>
+				<div class="col-span-12 lg:col-span-7">
+					<div>
+						<div class="flex mb-6 border-gray-200 border-b overflow-x-auto">
+							<?php
+							$tab_index = 0;
+							while( have_rows('tabs') ): the_row();
+								$tab_title = get_sub_field('title');
+							?>
+								<button
+									@click="activeTab = <?php echo $tab_index; ?>"
+									:class="activeTab === <?php echo $tab_index; ?> ? 'border-b-2 border-primary text-primary' : 'text-gray-600 hover:text-foreground'"
+									class="px-6 py-4 font-medium whitespace-nowrap transition-colors duration-200">
+									<?php echo esc_html($tab_title); ?>
+								</button>
+							<?php
+								$tab_index++;
+							endwhile;
+							?>
+						</div>
 
-    <li>
-      <a
-        x-on:click.prevent="activeTab = 'specs'"
-        :class="{ 'text-indigo-600': activeTab === 'specs' }"
-        class="underline"
-        href="#specs"
-      >
-        Specs
-      </a>
-    </li>
+						<div>
+						<?php
+							$content_index = 0;
+							while( have_rows('tabs') ): the_row();
+								$tab_content = get_sub_field('content');
+							?>
+								<div x-show="activeTab === <?php echo $content_index; ?>" x-transition class="tab-content">
+									<?php echo wp_kses_post($tab_content); ?>
+								</div>
+							<?php
+								$content_index++;
+							endwhile;
+							?>
+						</div>
+					</div>
 
-    <li>
-      <a
-        x-on:click.prevent="activeTab = 'reviews'"
-        :class="{ 'text-indigo-600': activeTab === 'reviews' }"
-        class="underline"
-        href="#reviews"
-      >
-        Reviews
-      </a>
-    </li>
-  </ul>
+				</div>
+			</div>
 
-  <div>
-    <div x-cloak x-show="activeTab === 'details'">Details</div>
-    <div x-cloak x-show="activeTab === 'specs'">Specs</div>
-    <div x-cloak x-show="activeTab === 'reviews'">Reviews</div>
-  </div>
-</div>
-
-
-
-
-</div>
-
+		</div>
+	<?php endif; ?>
+<?php endif; ?>
