@@ -269,12 +269,28 @@ p.is-style-lead {
 	@apply resize-none rounded-none border-1 border-white/50 bg-stone-900 !p-1.5 text-white/80;
 }
 
+.gform_wrapper.gravity-theme .contact-page input[type="text"],
+.gform_wrapper.gravity-theme .contact-page input[type="email"],
+.gform_wrapper.gravity-theme .contact-page input[type="tel"],
+.gform_wrapper.gravity-theme .contact-page textarea,
+.gform_wrapper.gravity-theme .contact-page select {
+	@apply border-secondary text-foreground;
+}
+
 .gform_wrapper.gravity-theme .gfield_label {
 	@apply font-sans !text-sm !font-normal text-white;
 }
 
+.gform_wrapper.gravity-theme .contact-page .gfield_label {
+	@apply text-foreground;
+}
+
 .gform_wrapper.gravity-theme .ginput_complex label {
 	@apply !text-xs text-white;
+}
+
+.gform_wrapper.gravity-theme .contact-page .ginput_complex label {
+	@apply text-foreground;
 }
 
 .gform_wrapper.gravity-theme .gform_footer {

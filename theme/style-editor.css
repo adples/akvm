@@ -496,6 +496,10 @@ p.has-reduce-font-size {
     color: color-mix(in oklab, var(--color-white) 80%, transparent);
   }
 }
+.gform_wrapper.gravity-theme .contact-page input[type="text"], .gform_wrapper.gravity-theme .contact-page input[type="email"], .gform_wrapper.gravity-theme .contact-page input[type="tel"], .gform_wrapper.gravity-theme .contact-page textarea, .gform_wrapper.gravity-theme .contact-page select {
+  border-color: var(--color-secondary);
+  color: var(--color-foreground);
+}
 .gform_wrapper.gravity-theme .gfield_label {
   font-family: var(--font-sans);
   font-size: var(--text-sm) !important;
@@ -504,10 +508,16 @@ p.has-reduce-font-size {
   font-weight: var(--font-weight-normal) !important;
   color: var(--color-white);
 }
+.gform_wrapper.gravity-theme .contact-page .gfield_label {
+  color: var(--color-foreground);
+}
 .gform_wrapper.gravity-theme .ginput_complex label {
   font-size: var(--text-xs) !important;
   line-height: var(--tw-leading, var(--text-xs--line-height)) !important;
   color: var(--color-white);
+}
+.gform_wrapper.gravity-theme .contact-page .ginput_complex label {
+  color: var(--color-foreground);
 }
 .gform_wrapper.gravity-theme .gform_footer {
   padding-bottom: calc(var(--spacing) * 0) !important;
