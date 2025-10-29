@@ -498,6 +498,7 @@ p.has-reduce-font-size {
 }
 .gform_wrapper.gravity-theme .contact-page input[type="text"], .gform_wrapper.gravity-theme .contact-page input[type="email"], .gform_wrapper.gravity-theme .contact-page input[type="tel"], .gform_wrapper.gravity-theme .contact-page textarea, .gform_wrapper.gravity-theme .contact-page select {
   border-color: var(--color-secondary);
+  background-color: transparent;
   color: var(--color-foreground);
 }
 .gform_wrapper.gravity-theme .gfield_label {

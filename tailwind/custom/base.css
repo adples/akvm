@@ -274,7 +274,7 @@ p.is-style-lead {
 .gform_wrapper.gravity-theme .contact-page input[type="tel"],
 .gform_wrapper.gravity-theme .contact-page textarea,
 .gform_wrapper.gravity-theme .contact-page select {
-	@apply border-secondary text-foreground;
+	@apply border-secondary text-foreground bg-transparent;
 }
 
 .gform_wrapper.gravity-theme .gfield_label {

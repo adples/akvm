@@ -39,7 +39,7 @@ function form_submit_button( $button, $form ) {
 
 	$icon = '<span class="wp-block-button__link-icon fill-white" aria-hidden="true"><svg viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg"><path d="M1.2,0 L2.22044605e-14,1 L4.5,6 L2.22044605e-14,11 L1.1,12 L6.6,6 L1.2,0 Z M7.2,0 L6.1,1 L10.6,6 L6.1,11 L7.2,12 L12.7,6 L7.2,0 L7.2,0 Z"></path></svg></span>';
 
-	return "<div class='".$align."wp-block-button flex w-full has-icon__next'><button class='inline-flex items-center bg-primary px-6 py-3 rounded-full font-semibold text-white uppercase has-default-gradient-gradient-background' id='gform_submit_button_{$form['id']}'><span>Send&nbsp;&nbsp;</span>$icon</button></div>";
+	return "<div class='wp-block-button flex w-full $align has-icon__next'><button class='inline-flex items-center bg-primary px-6 py-3 rounded-full font-semibold text-white uppercase has-default-gradient-gradient-background' id='gform_submit_button_{$form['id']}'><span>Send&nbsp;&nbsp;</span>$icon</button></div>";
 
 }
 add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
