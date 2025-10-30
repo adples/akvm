@@ -100,12 +100,8 @@ if( get_field('container') ) {
 }
 
 // Bg Position
-if( get_field('bg_pos') ) {
-	$bg_pos = get_field('bg_pos');
-} else{
-	$bg_pos ='';
-}
-
+$bg_pos = 'bg-center';
+if( get_field('bg_pos') ) $bg_pos = get_field('bg_pos');
 
 // Background Image
 $bg= '';
