@@ -475,3 +475,10 @@ p.is-style-lead {
 .tab-content ul li:not(:last-child) {
 	@apply pb-2;
 }
+
+.interface-interface-skeleton__sidebar {
+	width: 400px !important;
+}
+.interface-complementary-area.editor-sidebar {
+	width: 400px !important;
+}

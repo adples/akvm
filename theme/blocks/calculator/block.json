@@ -1,0 +1,16 @@
+{
+	"$schema": "https://advancedcustomfields.com/schemas/json/main/block.json",
+	"apiVersion": 3,
+	"name": "acf/calculator",
+	"title": "Roofing Calculator",
+	"description": "Custom block.",
+	"keywords": ["calculator","roofing","quote"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "calculator.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}
