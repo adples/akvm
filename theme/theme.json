@@ -51,6 +51,11 @@
 					"name": "Neutral"
 				},
 				{
+					"slug": "extra-light",
+					"color": "#f1f5f9",
+					"name": "Extra Light"
+				},
+				{
 					"slug": "transparent",
 					"color": "transparent",
 					"name": "Transparent"

@@ -127,6 +127,6 @@ $classes = implode( ' ', $all_classes );
                         </div>
                     </div>
                 </div>
-            </div>
+			</div>
 
 <?php endif; ?>

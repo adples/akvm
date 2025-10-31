@@ -8,7 +8,7 @@ function register_block_category( $categories ) {
 	$categories[] = array(
 		'slug'  => '_tw',
 		'title' => '_tw',
-		'order' => 0
+		'order' => 0,
 	);
 
 	return $categories;
@@ -22,21 +22,24 @@ add_action( 'block_categories', 'register_block_category', 10, 2 );
  */
 function register_acf_blocks() {
 
-	$dir = get_template_directory() . '/blocks/';
-	$folders = array_diff(scandir($dir), array('..', '.'));
+	$dir     = get_template_directory() . '/blocks/';
+	$folders = array_diff( scandir( $dir ), array( '..', '.' ) );
 
-	foreach ($folders as $folder) {
+	foreach ( $folders as $folder ) {
 		// Check if the item is a directory and not a file using is_dir()
-		if (is_dir($dir . $folder)) {
+		if ( is_dir( $dir . $folder ) ) {
 			// Register each ACF block to WordPress using register_block_type()
-			register_block_type($dir . $folder, [
-				'category' => '_tw',
-				'icon' => 'star-filled',
-			]);
+			register_block_type(
+				$dir . $folder,
+				array(
+					'category' => '_tw',
+					'icon'     => 'star-filled',
+				)
+			);
 		}
 	}
 }
-add_action('init', 'register_acf_blocks', 5);
+add_action( 'init', 'register_acf_blocks', 5 );
 
 
 
@@ -44,7 +47,7 @@ add_action('init', 'register_acf_blocks', 5);
  * ACF local JSON.
  */
 function my_acf_json_save_point( $path ) {
-    return get_template_directory() . '/acf-json';
+	return get_template_directory() . '/acf-json';
 }
 add_filter( 'acf/settings/save_json', 'my_acf_json_save_point' );
 
@@ -60,11 +63,35 @@ function remove_custom_padding_button() {
 		}
 	</style>';
 }
-add_action('admin_head', 'remove_custom_padding_button');
+add_action( 'admin_head', 'remove_custom_padding_button' );
 
 
 
 /**
  * Fixes AlpineJS block issues.
  */
-remove_filter('the_content', 'wptexturize');
+remove_filter( 'the_content', 'wptexturize' );
+
+
+
+/**
+ * Check for certain blocks in a post.
+ *
+ * @param   array  $blocks The block settings and attributes.
+ * @param   string $block_name The block inner HTML (empty).
+ */
+function count_blocks_of_type( $blocks, $block_name ) {
+	$count = 0;
+	if ( is_single() ) {
+		foreach ( $blocks as $block ) {
+			if ( $block['blockName'] === $block_name ) {
+				++$count;
+			}
+			// Check inner blocks recursively.
+			if ( ! empty( $block['innerBlocks'] ) ) {
+				$count += count_blocks_of_type( $block['innerBlocks'], $block_name );
+			}
+		}
+	}
+	return $count;
+}

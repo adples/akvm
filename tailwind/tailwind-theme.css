@@ -32,6 +32,7 @@
 	--color-primary-light: var(--wp--preset--color--primary-light);
 	--color-neutral: var(--wp--preset--color--neutral);
 	--color-light-grey: var(--wp--preset--color--light-grey);
+	--color-extra-light: var(--color-slate-100);
 	--gradient-default-gradient: var(--wp--preset--gradient--default-gradient);
 	--gradient-dark-gradient: var(--wp--preset--gradient--dark-gradient);
 	--container-content: var(--wp--style--global--content-size);

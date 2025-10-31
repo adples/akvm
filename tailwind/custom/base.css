@@ -476,9 +476,14 @@ p.is-style-lead {
 	@apply pb-2;
 }
 
-.interface-interface-skeleton__sidebar {
-	width: 400px !important;
+.recent-blog-posts {
+	@apply m-0 bg-slate-100 px-6 pb-6;
 }
-.interface-complementary-area.editor-sidebar {
-	width: 400px !important;
+
+.recent-blog-posts li {
+	@apply m-0 border-b border-dashed border-b-slate-300 py-2 last:border-b-0;
+}
+
+.recent-blog-posts li a {
+	@apply text-foreground no-underline;
 }
