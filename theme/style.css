@@ -109,8 +109,6 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
   --color-tertiary: var(--wp--preset--color--tertiary);
   --color-primary-dark: var(--wp--preset--color--primary-dark);
   --color-primary-light: var(--wp--preset--color--primary-light);
-  --color-neutral: var(--wp--preset--color--neutral);
-  --color-extra-light: var(--color-slate-100);
   --container-content: var(--wp--style--global--content-size);
   --container-wide: var(--wp--style--global--wide-size);
   --font-display: "Teko", "sans-serif";
@@ -971,8 +969,20 @@ p.has-reduce-font-size {
   border-bottom-width: 0px;
 }
 .recent-blog-posts li a {
+  display: block;
+  font-size: .925rem;
+  --tw-leading: calc(var(--spacing) * 5);
+  line-height: calc(var(--spacing) * 5);
   color: var(--color-foreground);
   text-decoration-line: none;
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+}
+@media (hover: hover) {
+  :is(.recent-blog-posts li a):hover {
+    color: var(--color-primary);
+  }
 }
 .page-title, .entry-title {
   margin-inline: auto;
@@ -2551,10 +2561,6 @@ p.has-reduce-font-size {
   border-style: var(--tw-border-style);
   border-width: 1px;
 }
-.border-1 {
-  border-style: var(--tw-border-style);
-  border-width: 1px;
-}
 .border-2 {
   border-style: var(--tw-border-style);
   border-width: 2px;
@@ -3102,11 +3108,6 @@ p.has-reduce-font-size {
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
   transition-duration: var(--tw-duration, var(--default-transition-duration));
 }
-.transition-shadow {
-  transition-property: box-shadow;
-  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-  transition-duration: var(--tw-duration, var(--default-transition-duration));
-}
 .transition-transform {
   transition-property: transform, translate, scale, rotate;
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -3237,12 +3238,6 @@ p.has-reduce-font-size {
 @media (hover: hover) {
   .hover\:shadow-2xl:hover {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-}
-@media (hover: hover) {
-  .hover\:shadow-xl:hover {
-    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 }
@@ -6163,6 +6158,10 @@ p.has-reduce-font-size {
   inherits: false;
   initial-value: 100%;
 }
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
@@ -6232,10 +6231,6 @@ p.has-reduce-font-size {
   syntax: "*";
   inherits: false;
   initial-value: 0;
-}
-@property --tw-leading {
-  syntax: "*";
-  inherits: false;
 }
 @property --tw-tracking {
   syntax: "*";
@@ -6368,6 +6363,7 @@ p.has-reduce-font-size {
       --tw-gradient-to-position: 100%;
       --tw-text-shadow-color: initial;
       --tw-text-shadow-alpha: 100%;
+      --tw-leading: initial;
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
@@ -6382,7 +6378,6 @@ p.has-reduce-font-size {
       --tw-space-y-reverse: 0;
       --tw-space-x-reverse: 0;
       --tw-divide-y-reverse: 0;
-      --tw-leading: initial;
       --tw-tracking: initial;
       --tw-blur: initial;
       --tw-brightness: initial;
