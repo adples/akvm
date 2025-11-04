@@ -16,7 +16,7 @@ html {
 }
 
 body {
-	@apply bg-background text-foreground font-sans;
+	@apply bg-background font-sans text-foreground;
 }
 
 body.logged-in.admin-bar .navbar-reveal.affix {
@@ -51,7 +51,8 @@ body.logged-in.admin-bar .navbar-reveal.affix {
 	margin-bottom: 1rem;
 }
 
-.main-content p {
+.main-content p,
+.entry-content p {
 	@apply 2xl:text-lg;
 }
 
@@ -187,7 +188,7 @@ p.is-style-lead {
 	aspect-ratio: 2;
 	clip-path: polygon(0 0, 100% 0, 0 100%);
 	content: "";
-	@apply bg-primary hidden lg:block;
+	@apply hidden lg:block bg-primary;
 }
 .wp-block-acf-cta::before {
 	top: 0;
@@ -217,9 +218,9 @@ p.is-style-lead {
 /**/
 .service-section {
 	position: relative;
-	@apply pt-[100px] shadow-[inset_0_100px_0_0_#fff] lg:pt-0;
+	@apply shadow-[inset_0_100px_0_0_#fff] pt-[100px] lg:pt-0;
 	@apply lg:shadow-[inset_0_200px_0_0_#fff];
-	@apply pb-15 xl:pb-25 2xl:shadow-[inset_0_300px_0_0_#fff];
+	@apply 2xl:shadow-[inset_0_300px_0_0_#fff] pb-15 xl:pb-25;
 }
 .service-section::after {
 	position: absolute;
@@ -274,19 +275,19 @@ p.is-style-lead {
 .gform_wrapper.gravity-theme .contact-page input[type="tel"],
 .gform_wrapper.gravity-theme .contact-page textarea,
 .gform_wrapper.gravity-theme .contact-page select {
-	@apply border-secondary text-foreground bg-transparent;
+	@apply bg-transparent border-secondary text-foreground;
 }
 
 .gform_wrapper.gravity-theme .gfield_label {
-	@apply font-sans !text-sm !font-normal text-white;
+	@apply font-sans !font-normal text-white !text-sm;
 }
 
 .gform_wrapper.gravity-theme .contact-page .gfield_label {
-	@apply text-foreground !font-semibold;
+	@apply !font-semibold text-foreground;
 }
 
 .gform_wrapper.gravity-theme .ginput_complex label {
-	@apply !text-xs text-white;
+	@apply text-white !text-xs;
 }
 
 .gform_wrapper.gravity-theme .contact-page .ginput_complex label {
@@ -313,7 +314,7 @@ p.is-style-lead {
 }
 
 .detail-contact-form_wrapper {
-	@apply border-foreground relative rounded-[1rem] !rounded-br-none border-2 bg-white p-4 md:rounded-[2rem] md:p-8 lg:rounded-[3rem] lg:p-12;
+	@apply relative bg-white p-4 md:p-8 lg:p-12 border-2 border-foreground rounded-[1rem] md:rounded-[2rem] lg:rounded-[3rem] !rounded-br-none;
 }
 
 .hidden-scroller {
@@ -388,15 +389,15 @@ p.is-style-lead {
 }
 
 .is-style-gradient-overlay::after {
-	@apply from-primary bg-linear-to-b to-transparent to-50%;
+	@apply bg-linear-to-b from-primary to-50% to-transparent;
 }
 
 .is-style-banner-overlay::after {
-	@apply bg-linear-to-t from-black to-transparent to-60%;
+	@apply bg-linear-to-t from-black to-60% to-transparent;
 }
 
 .is-style-gradient-overlay-rev::after {
-	@apply from-primary bg-linear-to-t to-transparent to-90%;
+	@apply bg-linear-to-t from-primary to-90% to-transparent;
 }
 
 .is-style-subtle-shadow {
@@ -405,11 +406,11 @@ p.is-style-lead {
 }
 
 .is-style-rounded-white {
-	@apply overflow-hidden rounded-4xl border-2 border-white;
+	@apply border-2 border-white rounded-4xl overflow-hidden;
 }
 
 .is-style-top-stripe {
-	@apply border-primary mt-2 border-t-1 xl:mt-4 xl:border-t-2;
+	@apply mt-2 xl:mt-4 border-primary border-t-1 xl:border-t-2;
 }
 
 .location-lists ul,
@@ -436,7 +437,7 @@ p.is-style-lead {
 }
 
 .footer .widget-title {
-	@apply font-display mb-3;
+	@apply mb-3 font-display;
 }
 
 .rank-math-breadcrumb p {
@@ -452,11 +453,11 @@ p.is-style-lead {
 }
 
 .tab-content h3 {
-	@apply font-display mb-2 text-5xl font-semibold;
+	@apply mb-2 font-display font-semibold text-5xl;
 }
 
 .tab-content h4 {
-	@apply mb-1 text-xl font-semibold;
+	@apply mb-1 font-semibold text-xl;
 }
 
 .tab-content p {
@@ -477,11 +478,11 @@ p.is-style-lead {
 }
 
 .recent-blog-posts {
-	@apply m-0 bg-slate-100 px-6 pb-6;
+	@apply bg-slate-100 m-0 px-6 pb-6;
 }
 
 .recent-blog-posts li {
-	@apply m-0 border-b border-dashed border-b-slate-300 py-2 last:border-b-0;
+	@apply m-0 py-2 border-b border-b-slate-300 last:border-b-0 border-dashed;
 }
 
 .recent-blog-posts li a {

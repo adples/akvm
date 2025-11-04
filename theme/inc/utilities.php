@@ -70,3 +70,20 @@ function truncate_at_word( $text, $max_length = 40 ) {
 	// Add ellipsis (optional).
 	return rtrim( $truncated ) . '...';
 }
+
+add_filter(
+	'rank_math/frontend/breadcrumb/items',
+	function ( $crumbs ) {
+		if ( ! is_single() ) {
+			return $crumbs;
+		}
+
+		$slug = 'blog';
+		$post = get_page_by_path( $slug );
+		$blog = array( 'Blog', get_permalink( $post->ID ) );
+		array_splice( $crumbs, 1, 0, array( $blog ) );
+		return $crumbs;
+	},
+	10,
+	2
+);
