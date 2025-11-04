@@ -1,0 +1,14 @@
+{
+	"apiVersion": 3,
+	"name": "acf/blogs",
+	"title": "Blog Grid",
+	"description": "Custom block.",
+	"keywords": ["blogs","post"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "blogs.php"
+	},
+	"supports": {
+		"anchor": true
+	}
+}
