@@ -2116,6 +2116,9 @@ p.has-reduce-font-size {
   width: calc(var(--spacing) * 50);
   height: calc(var(--spacing) * 50);
 }
+.\!h-full {
+  height: 100% !important;
+}
 .h-0 {
   height: calc(var(--spacing) * 0);
 }
@@ -2792,6 +2795,9 @@ p.has-reduce-font-size {
 }
 .object-cover {
   object-fit: cover;
+}
+.object-center {
+  object-position: center;
 }
 .\!p-6 {
   padding: calc(var(--spacing) * 6) !important;

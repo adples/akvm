@@ -41,7 +41,7 @@ $the_query = new WP_Query(
 	array(
 		'post_type'      => 'post',
 		'posts_per_page' => 100,
-		'order'          => 'ASC',
+		'order'          => 'DESC',
 	)
 );
 ?>
@@ -67,7 +67,7 @@ $the_query = new WP_Query(
 				if ( get_the_post_thumbnail( $blog_post_id ) ) :
 					?>
 					<div class="relative aspect-9/5">
-						<img class="absolute w-full h-full object-cover" src = "<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php echo esc_attr( $thumbnail_alt ); ?>" / >
+						<img class="absolute w-full !h-full object-center object-cover not-prose" src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php echo esc_attr( $thumbnail_alt ); ?>" / >
 					</div>
 				<?php endif; ?>
 				<div class="py-4 text-white">
