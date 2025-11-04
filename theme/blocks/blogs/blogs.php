@@ -62,7 +62,7 @@ $the_query = new WP_Query(
 		);
 		?>
 		<div class="box-border p-6 w-full md:w-1/2 xl:w-1/3 text-center">
-			<a href="<?php echo esc_url( $blog_post_url ); ?>" class="block bg-extra-light hover:shadow-xl border-primary border-b-3 rounded-t-lg w-full overflow-hidden transition-shadow">
+			<a href="<?php echo esc_url( $blog_post_url ); ?>" class="block bg-foreground bg-linear-to-t from-bg-foreground to-stone-900 hover:shadow-xl border-2 border-primary rounded-2xl w-full overflow-hidden transition-shadow">
 				<?php
 				if ( get_the_post_thumbnail( $blog_post_id ) ) :
 					?>
@@ -70,7 +70,7 @@ $the_query = new WP_Query(
 						<img class="absolute w-full h-full object-cover" src = "<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php echo esc_attr( $thumbnail_alt ); ?>" / >
 					</div>
 				<?php endif; ?>
-				<div class="py-4">
+				<div class="py-4 text-white">
 					<h3 class="font-display text-2xl"><?php echo esc_html( truncate_at_word( get_the_title() ) ); ?></h3>
 					<span><?php echo get_the_date(); ?></span>
 				</div>
