@@ -66,8 +66,8 @@ $the_query = new WP_Query(
 				<?php
 				if ( get_the_post_thumbnail( $blog_post_id ) ) :
 					?>
-					<div>
-						<img class="object-cover aspect-3/2" src = "<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php echo esc_attr( $thumbnail_alt ); ?>" / >
+					<div class="relative aspect-9/5">
+						<img class="absolute w-full h-full object-cover" src = "<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php echo esc_attr( $thumbnail_alt ); ?>" / >
 					</div>
 				<?php endif; ?>
 				<div class="py-4">

@@ -1932,6 +1932,9 @@ p.has-reduce-font-size {
 .aspect-3\/2 {
   aspect-ratio: 3/2;
 }
+.aspect-9\/5 {
+  aspect-ratio: 9/5;
+}
 .aspect-video {
   aspect-ratio: var(--aspect-video);
 }
