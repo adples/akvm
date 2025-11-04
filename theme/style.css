@@ -3195,9 +3195,19 @@ p.has-reduce-font-size {
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
 }
+@media (hover: hover) {
+  .group-hover\:bg-primary:is(:where(.group):hover *) {
+    background-color: var(--color-primary);
+  }
+}
 .last\:border-0:last-child {
   border-style: var(--tw-border-style);
   border-width: 0px;
+}
+@media (hover: hover) {
+  .hover\:-top-1:hover {
+    top: calc(var(--spacing) * -1);
+  }
 }
 @media (hover: hover) {
   .hover\:bg-gray-200:hover {
@@ -3222,6 +3232,12 @@ p.has-reduce-font-size {
 @media (hover: hover) {
   .hover\:text-gray-900:hover {
     color: var(--color-gray-900);
+  }
+}
+@media (hover: hover) {
+  .hover\:shadow-2xl:hover {
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 }
 @media (hover: hover) {

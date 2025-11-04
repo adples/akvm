@@ -62,7 +62,7 @@ $the_query = new WP_Query(
 		);
 		?>
 		<div class="box-border p-6 w-full md:w-1/2 xl:w-1/3 text-center">
-			<a href="<?php echo esc_url( $blog_post_url ); ?>" class="block bg-foreground bg-linear-to-t from-bg-foreground to-stone-900 hover:shadow-xl border-2 border-primary rounded-2xl w-full overflow-hidden transition-shadow">
+			<a href="<?php echo esc_url( $blog_post_url ); ?>" class="group block top-0 hover:-top-1 relative bg-foreground bg-linear-to-t from-bg-foreground to-stone-900 hover:shadow-2xl border-2 border-primary rounded-2xl w-full overflow-hidden transition-all">
 				<?php
 				if ( get_the_post_thumbnail( $blog_post_id ) ) :
 					?>
@@ -74,7 +74,7 @@ $the_query = new WP_Query(
 					<h3 class="font-display text-2xl"><?php echo esc_html( truncate_at_word( get_the_title() ) ); ?></h3>
 					<span><?php echo get_the_date(); ?></span>
 				</div>
-				<div class="relative mx-auto mt-2 mb-4 border-2 border-primary rounded-full size-8 text-white">
+				<div class="relative group-hover:bg-primary mx-auto mt-2 mb-4 border-2 border-primary rounded-full size-8 text-white transition-colors">
 
 					<svg fill="currentColor" class="top-[50%] left-[50%] absolute size-4 translate-[-50%]" viewBox="0 0 13 12" xlmns="http://www.w3.org/2000/svg">
 						<path d="M1.2,0 L2.22044605e-14,1 L4.5,6 L2.22044605e-14,11 L1.1,12 L6.6,6 L1.2,0 Z M7.2,0 L6.1,1 L10.6,6 L6.1,11 L7.2,12 L12.7,6 L7.2,0 L7.2,0 Z"></path>
