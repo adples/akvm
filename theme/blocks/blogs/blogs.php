@@ -70,9 +70,15 @@ $the_query = new WP_Query(
 						<img class="absolute w-full !h-full object-center object-cover not-prose" src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php echo esc_attr( $thumbnail_alt ); ?>" / >
 					</div>
 				<?php endif; ?>
-				<div class="py-4 text-white">
+				<div class="pt-4 text-white">
 					<h3 class="font-display text-2xl"><?php echo esc_html( truncate_at_word( get_the_title() ) ); ?></h3>
 					<span><?php echo get_the_date(); ?></span>
+				</div>
+				<div class="relative mx-auto mt-2 mb-4 border-2 border-primary rounded-full size-8 text-white">
+
+					<svg fill="currentColor" class="top-[50%] left-[50%] absolute size-4 translate-[-50%]" viewBox="0 0 13 12" xlmns="http://www.w3.org/2000/svg">
+						<path d="M1.2,0 L2.22044605e-14,1 L4.5,6 L2.22044605e-14,11 L1.1,12 L6.6,6 L1.2,0 Z M7.2,0 L6.1,1 L10.6,6 L6.1,11 L7.2,12 L12.7,6 L7.2,0 L7.2,0 Z"></path>
+					</svg>
 				</div>
 			</a>
 		</div>
