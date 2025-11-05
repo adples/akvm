@@ -488,3 +488,8 @@ p.is-style-lead {
 .recent-blog-posts li a {
 	@apply block text-[.925rem] text-foreground hover:text-primary no-underline leading-5 transition-colors;
 }
+
+.wp-element-button,
+.gravity-theme button {
+	@apply hover:opacity-85 transition-opacity;
+}

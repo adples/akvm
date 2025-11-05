@@ -839,6 +839,16 @@ p.has-reduce-font-size {
     color: var(--color-primary);
   }
 }
+.wp-element-button, .gravity-theme button {
+  transition-property: opacity;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+}
+@media (hover: hover) {
+  :is(.wp-element-button,.gravity-theme button):hover {
+    opacity: 85%;
+  }
+}
 .page-title, .entry-title {
   margin-inline: auto;
   margin-bottom: calc(var(--spacing) * 6);
