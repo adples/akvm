@@ -994,6 +994,16 @@ p.has-reduce-font-size {
     opacity: 85%;
   }
 }
+.wp-block-image.timbersteel {
+  margin-inline: auto;
+  max-width: 250px;
+}
+.wp-block-image.timbersteel img {
+  border-radius: calc(infinity * 1px);
+  border-style: var(--tw-border-style);
+  border-width: 2px;
+  border-color: var(--color-white);
+}
 .page-title, .entry-title {
   margin-inline: auto;
   margin-bottom: calc(var(--spacing) * 6);

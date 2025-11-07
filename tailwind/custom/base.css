@@ -493,3 +493,11 @@ p.is-style-lead {
 .gravity-theme button {
 	@apply hover:opacity-85 transition-opacity;
 }
+
+.wp-block-image.timbersteel {
+	@apply mx-auto max-w-[250px];
+}
+
+.wp-block-image.timbersteel img {
+	@apply border-2 border-white rounded-full;
+}
