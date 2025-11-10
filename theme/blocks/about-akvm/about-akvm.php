@@ -14,58 +14,69 @@
  * _tw safelist classes
  */
 
-
 $block_name = 'about-akvm';
 
 $namespace = 'acf';
 
 $block_name = 'wp-block-' . $namespace . '-' . $block_name;
 
-// Block #id
+// Block #id.
 $anchor = ( empty( $block['anchor'] ) ) ? null : 'id=' . $block['anchor'];
 
-// Default classes
+// Default classes.
 $default_classes = 'pt-15 pb-15 xl:pb-25';
 
-// Additional editor classes including $block['style'] defined in block.json
+// Additional editor classes including $block['style'] defined in block.json.
 $additional_classes = $block['className'] ?? '';
 
-if (get_field('hero')){
-	$bg = get_field('hero');
-	$bg_md = wp_get_attachment_image_src($bg['id'], 'medium_large')[0];
-	$bg_full = wp_get_attachment_image_src($bg['id'], 'full')[0];
-} else{
-	$bg_md = $bg_full = 'https://placehold.co/1500x600';
+if ( get_field( 'hero' ) ) {
+	$bg      = get_field( 'hero' );
+	$bg_md   = wp_get_attachment_image_src( $bg['id'], 'medium_large' )[0];
+	$bg_full = wp_get_attachment_image_src( $bg['id'], 'full' )[0];
+} else {
+	$bg_md   = 'https://placehold.co/1500x600';
+	$bg_full = $bg_md;
 }
 
-// Hero default classes
+// Hero default classes.
 $hero_default_classes = 'hero-company relative pb-[65%] md:pb-[55%] lg:pb-[45%] xl:pb-[40%] bg-local bg-cover bg-center bg-no-repeat bg-resize';
-$hero_attributes = 'class="'.$hero_default_classes.'" style="background-image: url('.$bg_md.')" data-img-md="'.$bg_md.'" data-img-full="'.$bg_full.'"';
+$hero_attributes      = 'class="' . $hero_default_classes . '" style="background-image: url(' . $bg_md . ')" data-img-md="' . $bg_md . '" data-img-full="' . $bg_full . '"';
 
 
-// Create array $all_classes and implode
+// Create array $all_classes and implode.
 $all_classes = array(
 	$block_name,
 	$default_classes,
-	$additional_classes
+	$additional_classes,
 );
 
 $classes = implode( ' ', $all_classes );
 
 ?>
 
-<div <?php echo esc_attr( $anchor ); ?> class="<?php echo $classes ?>">
+<div <?php echo esc_attr( $anchor ); ?> class="<?php echo esc_attr( $classes ); ?>">
 	<div class="mx-auto px-6 container">
-		<div <?php echo $hero_attributes ?>></div>
 
-		<div class="flex lg:flex-row flex-col items-center xl:items-end lg:gap-12">
-			<div class="w-full lg:basis-1/2">
-				<InnerBlocks class="space-y-3" />
+		<div
+		<?php
+		// phpcs:ignore
+		echo $hero_attributes;
+		?>
+		></div>
+
+		<div class="flex lg:flex-row flex-col items-center gap-8 lg:gap-12 mt-6 lg:mt-12">
+			<div class="lg:order-1 w-full lg:basis-1/2">
+				<InnerBlocks class="space-y-3 2xl:ps-4" />
 			</div>
-			<div class="mt-12 lg:mt-0 w-full lg:basis-1/2">
-				<div class="relative bg-[#ddd] is-style-rounded-white aspect-video">
-					<div class="top-[50%] left-[50%] absolute w-full text-center -translate-1/2">Video goes here...</div>
-				</div>
+			<div class="w-full lg:basis-1/2">
+				<?php if ( get_field( 'video' ) !== '' ) : ?>
+					<div class="relative bg-[#ddd] is-style-rounded-white aspect-video">
+						<div class="top-[50%] left-[50%] absolute w-full text-center -translate-1/2">Video goes here...</div>
+					</div>
+				<?php elseif ( get_field( 'img' ) ) : ?>
+					<img src="<?php echo esc_url( get_field( 'img' )['url'] ); ?>" alt="<?php echo esc_attr( get_field( 'img' )['alt'] ); ?>" class="is-style-rounded-white w-full" />
+				<?php endif ?>
+
 			</div>
 		</div>
 	</div>

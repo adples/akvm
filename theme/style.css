@@ -4297,6 +4297,11 @@ p.has-reduce-font-size {
   }
 }
 @media (width >= 64rem) {
+  .lg\:mt-12 {
+    margin-top: calc(var(--spacing) * 12);
+  }
+}
+@media (width >= 64rem) {
   .lg\:block {
     display: block;
   }
@@ -4971,6 +4976,11 @@ p.has-reduce-font-size {
 @media (width >= 80rem) {
   .xl\:my-24 {
     margin-block: calc(var(--spacing) * 24);
+  }
+}
+@media (width >= 80rem) {
+  .xl\:mt-12 {
+    margin-top: calc(var(--spacing) * 12);
   }
 }
 @media (width >= 80rem) {
