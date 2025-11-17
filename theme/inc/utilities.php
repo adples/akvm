@@ -41,7 +41,7 @@ function form_submit_button( $button, $form ) {
 
 	return "<div class='wp-block-button flex w-full $align has-icon__next'><button class='inline-flex items-center bg-primary px-6 py-3 rounded-full font-semibold text-white uppercase has-default-gradient-gradient-background' id='gform_submit_button_{$form['id']}'><span>Send&nbsp;&nbsp;</span>$icon</button></div>";
 }
-// add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
+add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
 
 /**
  * Return truncated string
