@@ -32,7 +32,7 @@ $dropdown_classes = isset( $args['reveal'] ) ? 'bg-foreground rounded-b-md text-
 
 				</button>
 
-				<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="<?php echo $dropdown_classes; ?> left-0 z-5 md:absolute w-full md:w-60 overflow-hidden origin-top-right">
+				<div x-cloak x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="<?php echo $dropdown_classes; ?> left-0 z-5 md:absolute w-full md:w-60 overflow-hidden origin-top-right">
 					<ul class="space-y-2 px-2 py-2">
 						<?php foreach ( $item->children as $child ) : ?>
 							<li class="<?php echo $child->classes; ?> <?php echo $child->active ? 'current-item' : ''; ?>">

@@ -18,18 +18,18 @@ $anchor = ( empty( $block['anchor'] ) ) ? null : 'id=' . $block['anchor'];
 $additional_classes = $block['className'] ?? '';
 
 // Step default classes
-$hero_default_classes = 'relative pt-25 pb-8 md:pt-16 xl:pb-16 bg-gray-400 hero-home wp-block-acf-wrapper';
+$hero_default_classes = 'relative pt-25 pb-8 md:pt-16 xl:pb-16 bg-gray-400 hero-home wp-block-acf-wrapper overflow-hidden';
 
 // Filter Overlay
-$rand = rand ( 10000 , 99999 );
-if( get_field('filter') ){
-	$filter = 'bg-filter relative overflow-hidden filter-'.$rand;
+$rand = rand( 10000, 99999 );
+if ( get_field( 'filter' ) ) {
+	$filter = 'bg-filter relative overflow-hidden filter-' . $rand;
 } else {
 	$filter = '';
 }
 
-//Background Video
-$show_video = get_field('show_video') && get_field('video') ? true : false;
+// Background Video
+$show_video = get_field( 'show_video' ) && get_field( 'video' ) ? true : false;
 
 // Create array $all_classes and implode
 $all_classes = array(
@@ -38,49 +38,48 @@ $all_classes = array(
 	$hero_default_classes,
 );
 
-if( !$show_video ) array_push($all_classes, $filter);
+if ( ! $show_video ) {
+	array_push( $all_classes, $filter );
+}
 
 $classes = implode( ' ', $all_classes );
 
 
 // Background Image
-$bg= '';
-if( get_field('bg') ){
-	$bg = get_field('bg');
-	$bg_md = wp_get_attachment_image_src($bg['id'], 'medium_large');
-	$bg_full = wp_get_attachment_image_src($bg['id'], 'full');
+$bg = '';
+if ( get_field( 'bg' ) && ! $show_video ) {
+	$bg      = get_field( 'bg' );
+	$bg_md   = wp_get_attachment_image_src( $bg['id'], 'medium_large' );
+	$bg_full = wp_get_attachment_image_src( $bg['id'], 'full' );
 
-	$attributes = 'class="'.$classes.' bg-cover bg-center bg-no-repeat bg-resize" style="background-image: url('.$bg_full[0].')" data-img-md="'.$bg_md[0].'" data-img-full="'.$bg_full[0].'"';
+	$attributes = 'class="' . $classes . ' bg-cover bg-center bg-no-repeat bg-resize" style="background-image: url(' . $bg_full[0] . ')" data-img-md="' . $bg_md[0] . '" data-img-full="' . $bg_full[0] . '"';
 } else {
-	$bg_md = $bg_full = 'https://placehold.co/1750x1200';
-	//$attributes = 'class="'.$classes.'"';
-	$attributes = 'class="'.$classes.' bg-cover bg-center bg-no-repeat bg-resize" style="background-image: url('.$bg_full.')" data-img-md="'.$bg_md.'" data-img-full="'.$bg_full.'"';
+	$attributes = 'class="' . $classes . ' bg-cover bg-center bg-no-repeat bg-resize"';
 }
 
 ?>
 
 <!-- Inline Style for Filter Overlay -->
-<?php if( !empty( $filter ) ): ?>
+<?php if ( ! empty( $filter ) ) : ?>
 	<style>
 		.filter-<?php echo $rand; ?>::before{
-			background-color: <?php echo get_field('filter'); ?>
+			background-color: <?php echo get_field( 'filter' ); ?>
 		}
 	</style>
 <?php endif; ?>
 <!-- / Inline Style for Filter Overlay -->
 
-<div <?php echo esc_attr( $anchor ); ?> <?php echo $attributes ?>>
+<div <?php echo esc_attr( $anchor ); ?> <?php echo $attributes; ?>>
 
-	<?php if( $show_video ): ?>
-		<div class="video-wrapper <?php echo $filter ?>">
+	<?php if ( $show_video ) : ?>
 		<?php
-		$x='https://player.vimeo.com/video/';
-		$y='&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;autoplay=1&amp;loop=1&amp;background=1';
-		$vimeo = get_field('video');
-		$vimeo_url = $x.$vimeo.$y;
+		$x         = 'https://player.vimeo.com/video/';
+		$y         = '&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;autoplay=1&amp;loop=1&amp;background=1';
+		$vimeo     = get_field( 'video' );
+		$vimeo_url = $x . $vimeo . $y;
 		?>
 
-		<iframe id="vimeo" src="<?php echo esc_url($vimeo_url) ?>" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<iframe id="vimeo" src="<?php echo esc_url( $vimeo_url ); ?>" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 	<?php endif ?>
 
@@ -100,12 +99,11 @@ if( get_field('bg') ){
 		</div>
 	</div>
 
-	<?php if( $show_video ): ?>
+	<?php if ( $show_video ) : ?>
 
-			<?php //get_template_part( 'template-parts/components/loader' ); ?>
+			<?php get_template_part( 'template-parts/components/loader' ); ?>
 
-		<!-- close video wrapper -->
-		</div>
+
 	<?php endif; ?>
 
 </div>

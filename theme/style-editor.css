@@ -861,6 +861,17 @@ p.has-reduce-font-size {
   border-width: 2px;
   border-color: var(--color-white);
 }
+.wp-block-acf-hero iframe {
+  height: 56.25vw;
+  left: 50%;
+  min-height: 101%;
+  min-width: 101%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  width: 177.77777778vh;
+  z-index: 0;
+}
 .page-title, .entry-title {
   margin-inline: auto;
   margin-bottom: calc(var(--spacing) * 6);
@@ -2954,6 +2965,10 @@ p.has-reduce-font-size {
 }
 .backdrop-blur-xs {
   --tw-backdrop-blur: blur(var(--blur-xs));
+  -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+}
+.backdrop-filter {
   -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
 }
