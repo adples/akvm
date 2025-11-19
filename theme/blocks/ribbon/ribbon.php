@@ -12,7 +12,7 @@
  * @param   (int|string) $post_id The post ID this block is saved to.
  *
  * _tw safelist classes
- * py-3 sm:inline-block
+ * py-3 sm:inline-block !lg:flex !hidden lg:flex! hidden!
  */
 
 
@@ -42,16 +42,16 @@ $classes = implode( ' ', $all_classes );
 
 ?>
 
-<div <?php echo esc_attr( $anchor ); ?> class="<?php echo $classes ?>">
+<div <?php echo esc_attr( $anchor ); ?> class="<?php echo $classes; ?>">
 	<div class="flex flex-row">
 		<div class="w-full xl:basis-1/4">
 			<div style="clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);">
-				<img src="<?php echo esc_url(get_field('img_1')['url'])?>" class="w-full"/>
+				<img src="<?php echo esc_url( get_field( 'img_1' )['url'] ); ?>" class="w-full"/>
 			</div>
 		</div>
 		<div class="hidden xl:flex w-full xl:basis-1/4">
 			<div style="clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);">
-			<img src="<?php echo esc_url(get_field('img_2')['url'])?>" class="w-full"/>
+			<img src="<?php echo esc_url( get_field( 'img_2' )['url'] ); ?>" class="w-full"/>
 			</div>
 		</div>
 		<div class="flex w-full has-dark-gradient-gradient-background xl:basis-1/4" style="clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);">
@@ -61,7 +61,7 @@ $classes = implode( ' ', $all_classes );
 		</div>
 		<div class="hidden xl:flex w-full xl:basis-1/4">
 			<div style="clip-path: polygon(5% 0, 100% 0%, 100% 100%, 0% 100%);">
-			<img src="<?php echo esc_url(get_field('img_3')['url'])?>" class="w-full"/>
+			<img src="<?php echo esc_url( get_field( 'img_3' )['url'] ); ?>" class="w-full"/>
 			</div>
 		</div>
 	</div>
