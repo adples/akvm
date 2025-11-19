@@ -45,6 +45,7 @@ $classes = implode( ' ', $all_classes );
 <?php else : ?>
 	<?php if ( have_rows( 'tabs' ) ) : ?>
 		<div <?php echo esc_attr( $anchor ); ?>
+			style="scroll-margin-top: 52px;"
 			x-data="{
 				groupId: '<?php echo esc_js( sanitize_title( $tab_id ) ?: 'tabs-' . uniqid() ); ?>',
 				activeTab: 0,
@@ -81,6 +82,10 @@ $classes = implode( ' ', $all_classes );
 							const tabIndex = this.tabSlugs.indexOf(tab);
 							if (tabIndex !== -1) {
 								this.activeTab = tabIndex;
+								// Scroll to the tab component
+								setTimeout(() => {
+									this.$el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+								}, 100);
 							}
 						}
 					}
@@ -92,6 +97,7 @@ $classes = implode( ' ', $all_classes );
 								const tabIndex = this.tabSlugs.indexOf(tab);
 								if (tabIndex !== -1) {
 									this.activeTab = tabIndex;
+									this.$el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 								}
 							}
 						}
