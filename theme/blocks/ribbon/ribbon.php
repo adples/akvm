@@ -12,7 +12,7 @@
  * @param   (int|string) $post_id The post ID this block is saved to.
  *
  * _tw safelist classes
- * py-3 sm:inline-block !lg:flex !hidden lg:flex! hidden!
+ * py-3 sm:inline-block !lg:flex !hidden lg:flex! hidden! lg:hidden!
  */
 
 

@@ -4337,6 +4337,11 @@ p.has-reduce-font-size {
   }
 }
 @media (width >= 64rem) {
+  .lg\:hidden\! {
+    display: none !important;
+  }
+}
+@media (width >= 64rem) {
   .lg\:size-6 {
     width: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 6);
