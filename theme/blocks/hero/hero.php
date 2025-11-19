@@ -89,7 +89,7 @@ if ( get_field( 'bg' ) && ! $show_video ) {
 				<InnerBlocks class="space-y-4"/>
 			</div>
 			<div class="w-full lg:basis-5/12 2xl:basis-1/2">
-				<div class="hidden lg:block bg-black/75 shadow-xl/50 2xl:ms-24 mt-8 lg:mt-0">
+				<div class="hidden lg:block bg-black/75 shadow-xl/50 backdrop-blur-md 2xl:ms-24 mt-8 lg:mt-0">
 					<h3 class="py-4 border-white/50 border-b font-semibold text-white text-center h6">Schedule <span class="text-primary">FREE</span> Inspection & Estimate</h3>
 					<div class="px-4 lg:px-8 py-4">
 						<?php gravity_form( 1, false, false, false, '', true ); ?>
