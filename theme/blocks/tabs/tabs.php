@@ -22,7 +22,7 @@ $block_name = 'wp-block-' . $namespace . '-' . $block_name;
 
 // Block #id.
 $anchor = ( empty( $block['anchor'] ) ) ? null : 'id=' . $block['anchor'];
-
+$tab_id = ( empty( $block['anchor'] ) ) ? null : $block['anchor'];
 // Additional editor classes including $block['style'] defined in block.json.
 $additional_classes = $block['className'] ?? '';
 
@@ -44,21 +44,65 @@ $classes = implode( ' ', $all_classes );
 	<div class="bg-black h-100"></div>
 <?php else : ?>
 	<?php if ( have_rows( 'tabs' ) ) : ?>
-		<div <?php echo esc_attr( $anchor ); ?> x-data="{
-			activeTab: 0,
-			images: [
-			<?php
-			$index = 0;
-			while ( have_rows( 'tabs' ) ) :
-				the_row();
-				$image = get_sub_field( 'img' );
-				echo $index > 0 ? ',' : '';
-				echo "'" . esc_url( $image['url'] ) . "'";
-				++$index;
-			endwhile;
-			?>
-			]
-		}">
+		<div <?php echo esc_attr( $anchor ); ?>
+			x-data="{
+				groupId: '<?php echo esc_js( sanitize_title( $tab_id ) ?: 'tabs-' . uniqid() ); ?>',
+				activeTab: 0,
+				images: [
+					<?php
+					$index = 0;
+					while ( have_rows( 'tabs' ) ) :
+						the_row();
+						$image = get_sub_field( 'img' );
+						echo $index > 0 ? ',' : '';
+						echo "'" . esc_url( $image['url'] ) . "'";
+						++$index;
+					endwhile;
+					?>
+				],
+				tabSlugs: [
+					<?php
+					$slug_index = 0;
+					while ( have_rows( 'tabs' ) ) :
+						the_row();
+						$tab_title = get_sub_field( 'title' );
+						$slug      = sanitize_title( $tab_title );
+						echo $slug_index > 0 ? ',' : '';
+						echo "'" . esc_js( $slug ) . "'";
+						++$slug_index;
+					endwhile;
+					?>
+				],
+				initFromHash() {
+					const hash = window.location.hash.slice(1);
+					if (hash) {
+						const [group, tab] = hash.split(':');
+						if (group === this.groupId && tab) {
+							const tabIndex = this.tabSlugs.indexOf(tab);
+							if (tabIndex !== -1) {
+								this.activeTab = tabIndex;
+							}
+						}
+					}
+					window.addEventListener('hashchange', () => {
+						const newHash = window.location.hash.slice(1);
+						if (newHash) {
+							const [group, tab] = newHash.split(':');
+							if (group === this.groupId && tab) {
+								const tabIndex = this.tabSlugs.indexOf(tab);
+								if (tabIndex !== -1) {
+									this.activeTab = tabIndex;
+								}
+							}
+						}
+					});
+				},
+				setTab(index) {
+					this.activeTab = index;
+					window.location.hash = this.groupId + ':' + this.tabSlugs[index];
+				}
+			}"
+		x-init="initFromHash()">
 			<div class="lg:gap-10 2xl:gap-16 grid grid-cols-12">
 				<div class="col-span-12 lg:col-span-5">
 					<div class="relative bg-white mb-8 is-style-rounded-white overflow-hidden">
@@ -66,51 +110,49 @@ $classes = implode( ' ', $all_classes );
 							:src="images[activeTab]"
 							alt="Product image"
 							class="w-full h-full object-cover transition-opacity duration-300"
-							x-transition>
+							x-transition />
 					</div>
-
 				</div>
 				<div class="col-span-12 lg:col-span-7">
 					<div>
 						<div class="flex mb-6 border-gray-200 border-b overflow-x-auto">
-							<?php
-							$tab_index = 0;
-							while ( have_rows( 'tabs' ) ) :
-								the_row();
-								$tab_title = get_sub_field( 'title' );
-								?>
+						<?php
+						$tab_index = 0;
+						while ( have_rows( 'tabs' ) ) :
+							the_row();
+							$tab_title = get_sub_field( 'title' );
+							?>
 								<button
-									@click="activeTab = <?php echo $tab_index; ?>"
+									@click="setTab(<?php echo $tab_index; ?>)"
 									:class="activeTab === <?php echo $tab_index; ?> ? 'border-b-2 border-primary text-primary' : 'text-gray-600 hover:text-foreground'"
-									class="px-6 py-4 font-medium whitespace-nowrap transition-colors duration-200">
+									class="px-6 py-4 font-medium whitespace-nowrap transition-colors duration-200"
+								>
 									<?php echo esc_html( $tab_title ); ?>
 								</button>
-								<?php
-								++$tab_index;
-							endwhile;
-							?>
+							<?php
+							++$tab_index;
+						endwhile;
+						?>
 						</div>
-
 						<div>
+
 						<?php
-							$content_index = 0;
+						$content_index = 0;
 						while ( have_rows( 'tabs' ) ) :
 							the_row();
 							$tab_content = get_sub_field( 'content' );
 							?>
-								<div x-show="activeTab === <?php echo $content_index; ?>" x-transition class="tab-content">
+							<div x-show="activeTab === <?php echo $content_index; ?>" x-transition class="tab-content">
 								<?php echo wp_kses_post( $tab_content ); ?>
-								</div>
+							</div>
 							<?php
 							++$content_index;
-							endwhile;
+						endwhile;
 						?>
 						</div>
 					</div>
-
 				</div>
 			</div>
-
 		</div>
 	<?php endif; ?>
 <?php endif; ?>
