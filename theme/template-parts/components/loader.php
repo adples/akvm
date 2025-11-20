@@ -50,7 +50,7 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		background-image: url('https://robm312.sg-host.com/wp-content/uploads/2025/11/bg-loader.webp');
+		background-image: url('https://akvm.com/wp-content/uploads/2025/11/bg-loader.webp');
 		background-size: cover;
 		background-position:center;
 		z-index: 5;
@@ -140,7 +140,7 @@ if ( function_exists( 'get_current_screen' ) ) {
 
 <div class="bg-foreground bg-linear-to-t from-bg-foreground to-stone-900 loader-overlay">
 	<div class="loader-inner">
-		<img src="https://robm312.sg-host.com/wp-content/uploads/2025/11/akvm-logo-lg-1.png" alt="AKVM Logo" class="mx-auto mb"/>
+		<img src="https://akvm.com/wp-content/uploads/2025/11/akvm-logo-lg-1.png" alt="AKVM Logo" class="mx-auto mb"/>
 		<span class="mx-auto mt-8 loader"></span>
 
 	</div>
