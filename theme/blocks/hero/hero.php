@@ -101,7 +101,7 @@ if ( get_field( 'bg' ) && ! $show_video ) {
 
 	<?php if ( $show_video ) : ?>
 
-			<?php get_template_part( 'template-parts/components/loader' ); ?>
+			<?php // get_template_part( 'template-parts/components/loader' ); ?>
 
 
 	<?php endif; ?>
@@ -110,27 +110,27 @@ if ( get_field( 'bg' ) && ! $show_video ) {
 
 <?php if ( $show_video ) : ?>
 <script>
-function fadeOut(element, duration) {
-	element.style.transition = `opacity ${duration}ms`;
-	element.style.opacity = 0;
+// function fadeOut(element, duration) {
+// 	element.style.transition = `opacity ${duration}ms`;
+// 	element.style.opacity = 0;
 
-	setTimeout(() => {
-		element.style.display = 'none';
-	}, duration);
-}
+// 	setTimeout(() => {
+// 		element.style.display = 'none';
+// 	}, duration);
+// }
 
-const video = document.querySelector('.wp-block-acf-hero');
-const loader = document.querySelector('.loader-overlay');
-if (video) {
-	var iframe = document.getElementById('vimeo');
-	/* eslint-disable */
-	var player = new Vimeo.Player(iframe);
-	/* eslint-enable */
-	player.on('play', function () {
-		setTimeout(function () {
-			fadeOut(loader, 1000);
-		}, 100);
-	});
-}
+// const video = document.querySelector('.wp-block-acf-hero');
+// const loader = document.querySelector('.loader-overlay');
+// if (video) {
+// 	var iframe = document.getElementById('vimeo');
+// 	/* eslint-disable */
+// 	var player = new Vimeo.Player(iframe);
+// 	/* eslint-enable */
+// 	player.on('play', function () {
+// 		setTimeout(function () {
+// 			fadeOut(loader, 1000);
+// 		}, 100);
+// 	});
+// }
 </script>
 <?php endif; ?>
