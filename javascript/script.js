@@ -38,26 +38,3 @@ function handleMediaQuery(e) {
 }
 
 handleMediaQuery(mediaQuery);
-
-function fadeOut(element, duration) {
-	element.style.transition = `opacity ${duration}ms`;
-	element.style.opacity = 0;
-
-	setTimeout(() => {
-		element.style.display = 'none';
-	}, duration);
-}
-
-const video = document.querySelector('.wp-block-acf-hero');
-const loader = document.querySelector('.loader-overlay');
-if (video) {
-	var iframe = document.getElementById('vimeo');
-	/* eslint-disable */
-	var player = new Vimeo.Player(iframe);
-	/* eslint-enable */
-	player.on('play', function () {
-		setTimeout(function () {
-			fadeOut(loader, 1000);
-		}, 100);
-	});
-}

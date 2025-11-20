@@ -2907,9 +2907,6 @@ p.has-reduce-font-size {
     color: color-mix(in oklab, var(--color-white) 75%, transparent);
   }
 }
-.capitalize {
-  text-transform: capitalize;
-}
 .uppercase {
   text-transform: uppercase;
 }
@@ -2942,10 +2939,6 @@ p.has-reduce-font-size {
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-}
-.blur-md {
-  --tw-blur: blur(var(--blur-md));
-  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
 }
 .brightness-0 {
   --tw-brightness: brightness(0%);
@@ -4184,11 +4177,6 @@ p.has-reduce-font-size {
 @media (width >= 64rem) {
   .lg\:block {
     display: block;
-  }
-}
-@media (width >= 64rem) {
-  .lg\:flex {
-    display: flex;
   }
 }
 @media (width >= 64rem) {
