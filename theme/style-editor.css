@@ -1597,9 +1597,6 @@ p.has-reduce-font-size {
 .mt-3 {
   margin-top: calc(var(--spacing) * 3);
 }
-.mt-4 {
-  margin-top: calc(var(--spacing) * 4);
-}
 .mt-6 {
   margin-top: calc(var(--spacing) * 6);
 }
@@ -2154,20 +2151,11 @@ p.has-reduce-font-size {
 .max-w-32 {
   max-width: calc(var(--spacing) * 32);
 }
-.max-w-64 {
-  max-width: calc(var(--spacing) * 64);
-}
 .max-w-72 {
   max-width: calc(var(--spacing) * 72);
 }
 .max-w-75 {
   max-width: calc(var(--spacing) * 75);
-}
-.max-w-80 {
-  max-width: calc(var(--spacing) * 80);
-}
-.max-w-90 {
-  max-width: calc(var(--spacing) * 90);
 }
 .max-w-100 {
   max-width: calc(var(--spacing) * 100);
@@ -2608,14 +2596,6 @@ p.has-reduce-font-size {
     background-color: color-mix(in oklab, var(--color-white) 5%, transparent);
   }
 }
-.bg-white\/10 {
-  background-color: color-mix(in srgb, #fff 10%, transparent);
-}
-@supports (color: color-mix(in lab, red, red)) {
-  .bg-white\/10 {
-    background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
-  }
-}
 .bg-zinc-700\/75 {
   background-color: color-mix(in srgb, oklch(37% 0.013 285.805) 75%, transparent);
 }
@@ -2757,9 +2737,6 @@ p.has-reduce-font-size {
 .py-12 {
   padding-block: calc(var(--spacing) * 12);
 }
-.py-16 {
-  padding-block: calc(var(--spacing) * 16);
-}
 .ps-0 {
   padding-inline-start: calc(var(--spacing) * 0);
 }
@@ -2777,9 +2754,6 @@ p.has-reduce-font-size {
 }
 .pt-15 {
   padding-top: calc(var(--spacing) * 15);
-}
-.pt-16 {
-  padding-top: calc(var(--spacing) * 16);
 }
 .pt-20 {
   padding-top: calc(var(--spacing) * 20);
@@ -2946,9 +2920,6 @@ p.has-reduce-font-size {
   .text-white\/75 {
     color: color-mix(in oklab, var(--color-white) 75%, transparent);
   }
-}
-.capitalize {
-  text-transform: capitalize;
 }
 .uppercase {
   text-transform: uppercase;
