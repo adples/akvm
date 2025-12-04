@@ -146,15 +146,15 @@ add_action( 'widgets_init', 'akvm_widgets_init' );
  */
 function akvm_scripts() {
 
-	// if ( is_front_page() ) {
-	// wp_enqueue_script(
-	// 'vimeo-api',
-	// 'https://player.vimeo.com/api/player.js',
-	// array(),
-	// AKVM_VERSION,
-	// true
-	// );
-	// }
+	if ( is_front_page() ) {
+		wp_enqueue_script(
+			'vimeo-api',
+			'https://player.vimeo.com/api/player.js',
+			array(),
+			AKVM_VERSION,
+			true
+		);
+	}
 
 	wp_enqueue_style( 'akvm-style', get_stylesheet_uri(), array(), AKVM_VERSION );
 	wp_enqueue_script( 'akvm-script', get_template_directory_uri() . '/js/script.min.js', array(), AKVM_VERSION, true );
