@@ -237,6 +237,16 @@ add_filter(
 	}
 );
 
+add_action(
+	'admin_init',
+	function () {
+		$t = get_site_transient( 'update_plugins' );
+		echo '<pre>';
+		print_r( $t->response );
+		echo '</pre>';
+	}
+);
+
 /**
  * Custom template tags for this theme.
  */
