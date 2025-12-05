@@ -198,6 +198,46 @@ function akvm_tinymce_add_class( $settings ) {
 add_filter( 'tiny_mce_before_init', 'akvm_tinymce_add_class' );
 
 /**
+ * Prevents Gravity Forms from auto-updating, even when plugin
+ * auto-updates are enabled site-wide.
+ *
+ * @since 1.0.0
+ *
+ * @param bool   $update Whether to update the plugin.
+ * @param object $item   Plugin update offer data.
+ * @return bool          False to disable updates for Gravity Forms.
+ */
+add_filter(
+	'auto_update_plugin',
+	function ( $update, $item ) {
+		if ( $item->slug === 'gravityforms' ) {
+			return false;
+		}
+		return $update;
+	},
+	10,
+	2
+);
+
+/**
+ * Removes Gravity Forms from the plugin update transient, preventing
+ * WordPress and third-party systems (such as SiteGround Optimizer)
+ * from detecting or attempting updates.
+ *
+ * @since 1.0.0
+ *
+ * @param stdClass $value The plugin update transient object.
+ * @return stdClass       The filtered transient object.
+ */
+add_filter(
+	'site_transient_update_plugins',
+	function ( $value ) {
+		unset( $value->response['gravityforms/gravityforms.php'] );
+		return $value;
+	}
+);
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
